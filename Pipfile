@@ -19,6 +19,7 @@ starlette = "==0.19.1"
 typing-extensions = "==4.2.0"
 uvicorn = "==0.17.6"
 SQLAlchemy = "==1.4.36"
+alembic = "*"
 
 [dev-packages]
 
