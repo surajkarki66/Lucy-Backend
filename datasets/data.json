@@ -136,7 +136,7 @@
         "phone no",
         "call"
       ],
-      "responses": ["You can contact at 02192669000"],
+      "responses": ["You can contact at +(977)01-5221006"],
       "context_set": ""
     },
     {
@@ -162,25 +162,23 @@
         "Civil engineering?",
         "Computer engineering?",
         "IT engineering?",
-        "Automobile engineering?",
         "Mechanical engineering?",
         "EXTC engineering?",
         "Electrical engineering?",
+        "Electronics engineering?",
+        "Civil and Rural engineering?",
         "civil",
         "it",
         "IT",
         "Computer",
-        "Automobile",
         "Mechanical",
         "EXTC",
         "Electrical",
         "Comps",
-        "Auto",
-        "Mech",
-        "extc"
+        "Architecture"
       ],
       "responses": [
-        "Bachelors Programmes provided are Automobile Engineering, Civil Engineering, Computer Engineering, Electrical Engineering, Electronics and Telecommunications Engineering, Information Technology Engineering,Mechanical Engineering and Applied Sciences.For more details visit<a target=\"_blank\" href=\"https://phcet.ac.in/academics/\"> here</a>"
+        "Bachelors Programmes provided are Computer Engineering, Civil Engineering, Electrical Engineering, Electronics Engineering, Civil and Rural Engineering.For more details visit<a target=\"_blank\" href=\"https://nec.edu.np/index.php?option=com_content&view=article&id=63&Itemid=69\"> here</a>"
       ],
       "context_set": ""
     },
@@ -209,8 +207,6 @@
         "fees comps",
         "fees it",
         "fees mech",
-        "fees auto",
-        "fees extc",
         "fees electrical",
         "fees computer",
         "fees mechanical",
@@ -221,7 +217,7 @@
         "fees open be"
       ],
       "responses": [
-        "For Fee details visit <a target=\"_blank\" href=\"https://phcet.ac.in/academics/admissions/fee-structure/\"> here</a>"
+        "For Fee details visit <a target=\"_blank\" href=\"https://entrance.nec.edu.np/apply/public/downloads/prospectus.pdf\"> here</a>"
       ],
       "context_set": ""
     },
@@ -244,7 +240,7 @@
         "location"
       ],
       "responses": [
-        "Khalapur, HOC Colony Rd, Taluka, Rasayani, Maharashtra 410207 For more details visit <a target=\"_blank\" href=\"https://goo.gl/maps/nABAciXu58ty7PyX6\"> here</a>"
+        "Changunarayan, Bhaktapur, Nepal. For more details visit <a target=\"_blank\" href=\"https://nec.edu.np/index.php?option=com_content&view=article&id=300&Itemid=119\"> here</a>"
       ],
       "context_set": ""
     },
@@ -275,7 +271,7 @@
         "distance between hostel and college"
       ],
       "responses": [
-        "NEC provides safe and affordable hostel facilities for boys and girls. For more details visit <a target=\"_blank\" href=\"https://phcet.ac.in/about/infrastructure-and-facilities/hostel-facility/\"> here</a>"
+        "NEC provides safe and affordable hostel facilities for boys and girls"
       ],
       "context_set": ""
     },
@@ -295,8 +291,7 @@
         "what about infrastructure"
       ],
       "responses": [
-        " For campus tour please visit the following link.<a target=\"_blank\" href=\"https://phcet.ac.in/about/infrastructure-and-facilities/campus-tour/\"> here</a>",
-        "For infrastructure details visit <a target=\"_blank\" href=\"https://phcet.ac.in/about/infrastructure-and-facilities/\"> here</a>"
+        "For infrastructure details visit <a target=\"_blank\" href=\"https://nec.edu.np/\"> here</a>"
       ],
       "context_set": ""
     },
@@ -316,8 +311,8 @@
         "what about events"
       ],
       "responses": [
-        "Our college organizes various events during academics.Many Events are useful for technical skils and placements activities.There are many events which are held by deparments.<a target=\"_blank\" href=\"https://phcet.ac.in/news-and-events/news-notifications/\"> here</a>",
-        "Our NEC organizes FESTIVAL every year.There are major 2 fest in our college.1)EUFORIA 2)TECH-EUFORIA. Visit <a target=\"_blank\" href=\"https://phcet.ac.in/news-and-events/news-notifications/\"> here</a>"
+        "Our college organizes various events during academics.Many Events are useful for technical skils and placements activities.There are many events which are held by deparments.<a target=\"_blank\" href=\"https://nec.edu.np/index.php?option=com_content&view=category&layout=blog&id=34&Itemid=53\"> here</a>",
+        "Our NEC organizes FESTIVAL every year"
       ],
       "context_set": ""
     },
@@ -339,23 +334,23 @@
         "documents needed"
       ],
       "responses": [
-        "To know more about documents required visit<a target=\"_blank\" href=\"https://phcet.ac.in/academics/admissions/list-of-document-required/\"> here</a>"
+        "To know more about documents required visit<a target=\"_blank\" href=\"https://entrance.nec.edu.np/apply/public/\"> here</a>"
       ],
       "context_set": ""
     },
     {
       "intent": "syllabus",
       "questions": [
-        "Syllabus for IT",
-        "what is the Information Technology syllabus",
+        "Syllabus for CSE",
+        "what is the Computer Engineering syllabus",
         "syllabus",
         "timetable",
-        "what is IT syllabus",
+        "what is CSE syllabus",
         "syllabus",
         "What is next lecture"
       ],
       "responses": [
-        "Syllabus of all years and departments is available in the link below. <a target=\"_blank\" href=\"https://phcet.ac.in/academics/syllabus/\"> here</a>"
+        "Syllabus of all years and departments is available in the link below. <a target=\"_blank\" href=\"https://pu.edu.np/programlevel/st-bachelor/\"> here</a>"
       ],
       "context_set": ""
     },
@@ -376,7 +371,7 @@
         "how many libraries"
       ],
       "responses": [
-        "NEC has a huge and spacious library on the second floor. For more details visit <a target=\"_blank\" href=\"https://phcet.ac.in/library/library-information/\"> here</a>"
+        "NEC has a huge and spacious library on the ground floor of CSE department."
       ],
       "context_set": ""
     },
@@ -395,7 +390,7 @@
         "Cafetaria"
       ],
       "responses": [
-        "NEC has canteen with variety of food available. <a target=\"_blank\" href=\"https://phcet.ac.in/about/infrastructure-and-facilities/\"> here</a>"
+        "NEC has canteen with variety of food available."
       ],
       "context_set": ""
     },
@@ -409,7 +404,7 @@
         "what foods can we get in college canteen"
       ],
       "responses": [
-        "The college canteen serves Tea, Coffee, Vada Pav, Misal Pav, Bread Pakoda, Thaali, Samosa, Dal Rice, Biryani and many more dishes."
+        "The college canteen serves Tea, Coffee, Mo:Mo, Samosa, Dal Rice and many more dishes."
       ],
       "context_set": ""
     },
@@ -426,112 +421,20 @@
         "companies"
       ],
       "responses": [
-        "Various companies are coming to recruite our students and offer maximum packages.MAIN RECRUITERS are TCS,RELIANCE JIO,L AND T INFOTECH etc.For more information visit <a target=\"_blank\" href=\"https://phcet.ac.in/students/placements/our-recruiters/\">here</a>",
-        "Our college oragnise various activities related to placements.For latest update visit <a target=\"_blank\" href=\"https://phcet.ac.in/students/placements/placement-cell-activities/\">here</a>"
+        "Various companies are coming to recruite our students and offer maximum packages.MAIN RECRUITERS are Leapfrog,hamrobazar e.t.c"
       ],
       "context_set": ""
     },
     {
-      "intent": "ithod",
+      "intent": "csehod",
       "questions": [
-        "Who is IT HOD",
-        "Where is IT HOD",
-        "it hod",
-        "name of it hod"
+        "Who is CSE HOD",
+        "Where is CSE HOD",
+        "CSE hod",
+        "name of CSE hod"
       ],
       "responses": [
-        "Mr. Amol N. Karande is IT HOD who is available on the 4th floor. To know more visit <a target=\"_blank\" href=\"https://phcet.ac.in/faculty/faculty-directory/\">here</a>"
-      ],
-      "context_set": ""
-    },
-    {
-      "intent": "civilhod",
-      "questions": [
-        "Who is Civil HOD",
-        "Where is civil HOD",
-        "civil hod",
-        "name of civil hod"
-      ],
-      "responses": [
-        "Dr. Amit Das Gupta is Civil HOD who is available on 5th floor. To know more visit <a target=\"_blank\" href=\"https://phcet.ac.in/faculty/faculty-directory/\">here</a>"
-      ],
-      "context_set": ""
-    },
-    {
-      "intent": "mechhod",
-      "questions": [
-        "Who is Mechanical HOD",
-        "Where is  mechanical HOD",
-        "mechanical hod",
-        "name of mechanical hod"
-      ],
-      "responses": [
-        "Dr. Gajendra Vasantrao Patil is Mechanical HOD who is available on 3rd floor. To know more visit <a target=\"_blank\" href=\"https://phcet.ac.in/faculty/faculty-directory/\">here</a>"
-      ],
-      "context_set": ""
-    },
-    {
-      "intent": "comphod",
-      "questions": [
-        "Who is Computer HOD",
-        "Where is  Computer HOD",
-        "computer hod",
-        "name of computer hod"
-      ],
-      "responses": [
-        "Dr. Ashok Kanthe is Computer HOD who is available on 4th floor. To know more visit <a target=\"_blank\" href=\"https://phcet.ac.in/faculty/faculty-directory/\">here</a>"
-      ],
-      "context_set": ""
-    },
-    {
-      "intent": "autohod",
-      "questions": [
-        "Who is Automobile HOD",
-        "Where is Automobile HOD",
-        "automobile hod",
-        "name of automobile hod"
-      ],
-      "responses": [
-        "Mr. Vivek Meshram is Automobile HOD who is available on 3rd floor. To know more visit <a target=\"_blank\" href=\"https://phcet.ac.in/faculty/faculty-directory/\">here</a>"
-      ],
-      "context_set": ""
-    },
-    {
-      "intent": "elechod",
-      "questions": [
-        "Who is Electrical HOD",
-        "Where is Electrical HOD",
-        "electrical hod",
-        "name of electrical hod"
-      ],
-      "responses": [
-        "Dr. Panimaya Selvi Isabel A. is Electrical HOD who is available on 5th floor. To know more visit <a target=\"_blank\" href=\"https://phcet.ac.in/faculty/faculty-directory/\">here</a>"
-      ],
-      "context_set": ""
-    },
-    {
-      "intent": "extchod",
-      "questions": [
-        "Who is EXTC HOD",
-        "Where is EXTC HOD",
-        "extc hod",
-        "name of extc hod"
-      ],
-      "responses": [
-        "Dr. Mansi S. Subhedar is EXTC HOD who is available on 1st floor. To know more visit <a target=\"_blank\" href=\"https://phcet.ac.in/faculty/faculty-directory/\">here</a>"
-      ],
-      "context_set": ""
-    },
-    {
-      "intent": "fehod",
-      "questions": [
-        "Who is FE HOD",
-        "Where is FE HOD",
-        "fe hod",
-        "name of fe hod"
-      ],
-      "responses": [
-        "Dr. Manvendra Vashisht is FE/ASH HOD who is available on Ground floor. To know more visit <a target=\"_blank\" href=\"https://phcet.ac.in/faculty/faculty-directory/\">here</a>"
+        "Mr. Sunar Kunwar is CSE HOD who is available on the 1st floor."
       ],
       "context_set": ""
     },
@@ -547,7 +450,7 @@
         "name of principal"
       ],
       "responses": [
-        "Dr. Mathew T. Joseph is college principal who is available on 1st floor. To know more visit <a target=\"_blank\" href=\"https://phcet.ac.in/faculty/faculty-directory/\">here</a>"
+        "Dr. Hari Krishna Shrestha is college principal who is available on Ground floor of Civil Department."
       ],
       "context_set": ""
     },
@@ -568,7 +471,7 @@
         "admission engineering"
       ],
       "responses": [
-        "Application can also be submitted online through the Mumbai Unversity. Refer <a href=https://phcet.ac.in/academics/admissions/admissions-and-eligibility>website</a>"
+        "Application can also be submitted online through the NEC website. Refer <a href=https://entrance.nec.edu.np/apply/public/>website</a>"
       ],
       "context_set": ""
     },
@@ -600,7 +503,7 @@
         "seats"
       ],
       "responses": [
-        "For Computer and Civil, the intake is 120.For IT, Electrical, EXTC and Automobile 60 per batch. Mechanical Department has 180 students intake. "
+        "For Computer and Civil, the intake is 96 and 144 respectively.For Electrical and Civil and Rural is 48 per batch "
       ],
       "context_set": ""
     },
@@ -617,7 +520,7 @@
         "what about uniform",
         "do we have to wear uniform"
       ],
-      "responses": ["NEC does not have uniform"],
+      "responses": ["NEC does have an uniform but it is not compulsory. Link <a target=\"_blank\" href=\"#\">here</a>"],
       "context_set": ""
     },
     {
@@ -678,7 +581,7 @@
         "why i should use you"
       ],
       "responses": [
-        "I can answer to low-intermediate questions regarding college",
+        "I can answer to intermediate questions regarding college",
         "You can ask me questions regarding college, and i will try to answer them"
       ],
       "context_set": ""
@@ -703,7 +606,7 @@
       "intent": "hod",
       "questions": ["hod", "hod name", "who is the hod"],
       "responses": [
-        "HODs differ for each branch, please be more specific like: (HOD it)"
+        "HODs differ for each branch, please be more specific like: (HOD CSE)"
       ]
     },
     {
@@ -718,7 +621,7 @@
         "list of buses for travelling"
       ],
       "responses": [
-        "NEC provides bus facility to students through various places like Panvel, Kharghar, Uran, Alibag, Pen, Karjat, etc."
+        "NEC provides bus facility to students through various places. Details <a target=\"_blank\" href=\"https://nec.edu.np/images/stories/10042022busroute.jpg\"> here</a>"
       ]
     },
     {
@@ -727,33 +630,26 @@
         "scholarship",
         "Is scholarship available",
         "scholarship engineering",
-        "scholarship fe",
-        "scholarship se",
-        "scholarship te",
-        "scholarship be",
         "available scholarships",
         "scholarship for computer engineering",
-        "scholarship for automobile engineering",
-        "scholarship for IT engineering",
-        "scholarship for mechanical engineering",
+        "scholarship for civil and rural engineering",
+        "scholarship for electronincs engineering",
         "scholarship for civil engineering",
-        "scholarship for extc engineering",
+        "scholarship for architecture",
         "scholarship for electrical engineering",
         "list of scholarship",
         "comps scholarship",
-        "IT scholarship",
-        "mechanical scholarship",
+        "civil and rural scholarship",
+        "electronincs scholarship",
         "civil scholarship",
         "electrical scholarship",
-        "extc scholarship",
-        "automobile scholarship",
         "first year scholarship",
         "second year scholarship",
         "third year scholarship",
         "fourth year scholarship"
       ],
       "responses": [
-        "Many government scholarships are supported by NEC. For details and updates visit <a target=\"_blank\" href=\"https://mahadbtmahait.gov.in/Home/Index\">here</a>"
+        "Many government scholarships are supported by NEC. For details and updates visit <a target=\"_blank\" href=\"https://entrance.nec.edu.np/apply/public/\">here</a>"
       ]
     },
     {
@@ -761,15 +657,9 @@
       "questions": [
         "faculty",
         "faculty details",
-        "faculty fe",
-        "faculty se",
-        "faculty te",
-        "faculty be",
         "computer faculty",
-        "IT faculty",
-        "mechanical faculty",
-        "automobile faculty",
-        "extc faculty",
+        "Civil and rural faculty",
+        "electronics faculty",
         "electrical faculty",
         "civil faculty",
         "engineering faculty",
@@ -787,7 +677,7 @@
         "faculty?"
       ],
       "responses": [
-        "NEC has a highly qualified and experienced faculty. For details visit <a target=\"_blank\" href=/\"https://phcet.ac.in/faculty/faculty-directory/\">here</a>"
+        "NEC has a highly qualified and experienced faculty. For details visit <a target=\"_blank\" href=/\"https://nec.edu.np/index.php?option=com_content&view=category&id=51&Itemid=132\">here</a>"
       ]
     },
     {
@@ -804,7 +694,7 @@
         "where to login"
       ],
       "responses": [
-        "For student portal link visit<a target=\"_blank\" href=/\"https://phcetstudentportal.mes.ac.in/\">here</a>"
+        "For student portal link visit<a target=\"_blank\" href=/\"https://entrance.nec.edu.np/apply/public/\">here</a>"
       ]
     },
     {
@@ -819,7 +709,7 @@
         "please provide faculty portal link"
       ],
       "responses": [
-        "For Faculty portal link visit<a target=\"_blank\" href=/\"https://phcet.ac.in/faculty/faculty-directory/\">here</a>"
+        "For Faculty portal link visit<a target=\"_blank\" href=/\"https://nec.edu.np/index.php?option=com_content&view=category&id=51&Itemid=132\">here</a>"
       ]
     },
     {
@@ -834,7 +724,7 @@
         "please provide sports and games information"
       ],
       "responses": [
-        "NEC encourages all-round development of students and hence provides sports facilities in the campus. For more details visit<a target=\"_blank\" href=/\"https://phcet.ac.in/students/sports-and-games/\">here</a>"
+        "NEC encourages all-round development of students and hence provides sports facilities in the campus."
       ]
     },
     {
@@ -863,7 +753,7 @@
         "fests?"
       ],
       "responses": [
-        "NEC encourages all-round development of students and hence organizes vibrant fests like Euforia and Tech Euforia in the campus. For more details visit<a target=\"_blank\" href=/\"https://phcet.ac.in/students/campus-fest/euforia/\">here</a>"
+        "NEC encourages all-round development of students and hence organizes vibrant fests in the campus."
       ]
     }
   ]
