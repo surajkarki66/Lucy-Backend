@@ -1,6 +1,6 @@
 from spacy.lang.en import English
 nlp = English()
-tokenizer = nlp.Defaults.create_tokenizer(nlp)
+tokenizer = nlp.tokenizer
 
 class Voc:
     def __init__(self):
