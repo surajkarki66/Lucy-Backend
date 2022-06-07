@@ -1,3 +1,4 @@
+import random
 from spacy.lang.en import English
 
 nlp = English()
@@ -38,6 +39,9 @@ class voc:
         return token_list
     
     def getIndexOfWord(self,word):
+        if word  not in self.word2index:
+            return random.randint(0,len(self.word2index))
+
         return self.word2index[word]
     
     def getQuestionInNum(self, ques):
