@@ -1,4 +1,6 @@
-from pydantic import BaseModel, Field, EmailStr, validator
+from datetime import datetime
+
+from pydantic import BaseModel, Field, EmailStr, validator, SecretStr
 from enum import Enum
 
 class GetBotResponseSchema(BaseModel):
@@ -32,3 +34,50 @@ class FeedbackSchema(FeedbackBase):
             raise ValueError("id must be zero and greater than zero")
         return 
 
+
+class UserCreateSchema(BaseModel):
+    first_name: str = Field(..., min_length=2, max_length=32)
+    last_name: str = Field(..., min_length=2, max_length=32)
+    email: EmailStr = Field(...)
+    password: str = Field(..., min_length=6)
+
+
+class UserSchema(BaseModel):
+    id: int = Field(...)
+    first_name: str = Field(..., min_length=2, max_length=32)
+    last_name: str = Field(..., min_length=2, max_length=32)
+    email: EmailStr = Field(...)
+    password: SecretStr = Field(...)
+    role: Role = Field(...)
+    created_at: datetime = Field(...)
+    updated_at: datetime = Field(...)
+
+    @validator("id")
+    def validate_id(cls, v):
+        if v < 0:
+            raise ValueError("id must be zero and greater than zero")
+        return v
+
+    class Config:
+        orm_mode = True
+
+
+
+class UserLoginSchema(BaseModel):
+    email: EmailStr = Field(...)
+    password: str = Field(..., min_length=6)
+
+
+class TokenSchema(BaseModel):
+    access_token: str = Field(...)
+
+
+
+class UserUpdateSchema(BaseModel):
+    first_name: str = Field(..., min_length=2, max_length=32)
+    last_name: str = Field(..., min_length=2, max_length=32)
+
+
+class PasswordUpdateSchema(BaseModel):
+    old_password: str = Field(..., min_length=6)
+    password: str = Field(..., min_length=6)

@@ -12,3 +12,6 @@ tensorflow
 pydantic[email]
 keras
 spacy==2.3.6
+datetime
+passlib
+PyJWT

@@ -11,6 +11,9 @@ class Settings(BaseSettings):
     DATABASE_PASSWORD: str
     DATABASE_NAME: str
     DATABASE_USERNAME: str
+    JWT_EXPIRE_SECONDS: int
+    SECRET_KEY: str
+    ALGORITHM: str
     HOST: str
     PORT: int
 
