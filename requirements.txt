@@ -16,5 +16,6 @@ sqlalchemy
 starlette
 typing-extensions
 uvicorn
-nltk
-spacy
+tensorflow
+sklearn
+numpy
