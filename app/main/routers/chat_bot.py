@@ -10,9 +10,9 @@ classification_service = IntentClassificationService()
 router = APIRouter(prefix='/bot')
 
 
-@router.post("/chat", status_code=status.HTTP_200_OK, response_model=GetBotResponseSchema)
-def get_bot_response(query: str) -> dict : 
-    inp_x=query.lower()
+@router.get("/chat", status_code=status.HTTP_200_OK, response_model=GetBotResponseSchema)
+def get_bot_response(message: str) -> dict : 
+    inp_x=message.lower()
     results = classification_service.predict(inp_x)
     response= classification_service.get_response(results)
 

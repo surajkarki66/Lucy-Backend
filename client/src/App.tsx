@@ -1,7 +1,9 @@
-import React from "react";
-
 function App() {
-  return <div>Lucy: NLP powered chatbot</div>;
+  return (
+    <div>
+      <h1>Lucy</h1>
+    </div>
+  );
 }
 
 export default App;
