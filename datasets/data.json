@@ -389,9 +389,7 @@
         "canteen",
         "Cafetaria"
       ],
-      "responses": [
-        "NEC has canteen with variety of food available."
-      ],
+      "responses": ["NEC has canteen with variety of food available."],
       "context_set": ""
     },
     {
@@ -434,7 +432,7 @@
         "name of CSE hod"
       ],
       "responses": [
-        "Mr. Sunar Kunwar is CSE HOD who is available on the 1st floor."
+        "Mr. Sundar Kunwar is CSE HOD who is available on the 1st floor."
       ],
       "context_set": ""
     },
@@ -520,7 +518,9 @@
         "what about uniform",
         "do we have to wear uniform"
       ],
-      "responses": ["NEC does have an uniform but it is not compulsory. Link <a target=\"_blank\" href=\"#\">here</a>"],
+      "responses": [
+        "NEC does have an uniform but it is not compulsory. Link <a target=\"_blank\" href=\"#\">here</a>"
+      ],
       "context_set": ""
     },
     {

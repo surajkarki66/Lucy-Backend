@@ -1,51 +1,66 @@
-import json
-import tensorflow as tf
+from spacy.lang.en import English
 
-from pathlib import Path
+nlp = English()
+tokenizer = nlp.Defaults.create_tokenizer(nlp)
 
-
-class Voc:
+class voc:
     def __init__(self):
-        self.VOCAB_SIZE = 1000
-        self.OOV_TOKEN = "<OOV>"
-        self.MAX_LEN = 20
-      
-        BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
-        DATA_DIR = BASE_DIR.joinpath('datasets')
-        DATA = DATA_DIR.joinpath('data.json')
+        self.num_words= 1  # 0 is reserved for padding 
+        self.num_intents=0
+        self.intents={}
+        self.index2intents={}
+        self.questions={}
+        self.word2index={}
+        self.response={}
+  
+    def addWord(self,word):
+        if word not in self.word2index:
+            self.word2index[word] = self.num_words
+            self.num_words += 1
 
-        LABELS_DIR = BASE_DIR.joinpath('datasets')
-        LABELS = LABELS_DIR.joinpath('labels.json')
+    def addIntents(self,intent):
+        if intent not in self.intents:
+            self.intents[intent]=self.num_intents
+            self.index2intents[self.num_intents]=intent
+            self.num_intents+=1
 
-        with open(LABELS) as file:
-            data = json.load(file)
-            self.labels = data["intent_labels"]
-
-        with open(DATA) as file:
-            data = json.load(file)
-            self.intents = data["intents"]
+    def addQuestion(self, question, answer):
+        self.questions[question]=answer
+        words=self.tokenization(question)
+        for  wrd in words:
+            self.addWord(wrd)
+                 
+    def tokenization(self,ques):
+        tokens = tokenizer(ques)
+        token_list = []
+        for token in tokens:
+            token_list.append(token.lemma_)
+        return token_list
     
-    def tokenize(self, input_text):
-        tokenizer = tf.keras.preprocessing.text.Tokenizer(num_words=self.VOCAB_SIZE, oov_token=self.OOV_TOKEN)
-        tokenizer.fit_on_texts(input_text)
-        word_index = tokenizer.word_index
-        sequences = tokenizer.texts_to_sequences(input_text)
-        return sequences
+    def getIndexOfWord(self,word):
+        return self.word2index[word]
+    
+    def getQuestionInNum(self, ques):
+        words=self.tokenization(ques)
+        tmp=[ 0 for i in range(self.num_words)]
+        for wrds in words:
+            tmp[self.getIndexOfWord(wrds)]=1
+        return tmp
+    
+ 
+    def getIntent(self, intent):
+        tmp=[0.0 for i in range(self.num_intents)]
+        tmp[self.intents[intent]]=1.0
+        return tmp
+    
+    def getVocabSize(self):
+        return self.num_words
+    
+    def getIntentSize(self):
+        return self.num_intents
 
-    def add_padding(self, sequences):
-        padded_sequences = tf.keras.preprocessing.sequence.pad_sequences(sequences, truncating='post', maxlen=self.MAX_LEN)
-        return padded_sequences
-
-
-    def index2intents(self, index):
-        intent = self.labels[index]
-        return intent
-
-    def intent2response(self, intent_label):
-        for intent in self.intents:
-            if(intent["intent"] == intent_label):
-                return intent["responses"]
-
-
-
-
+    def addResponse(self, intent, responses):
+        intent = intent["intent"]
+        self.response[intent]=responses
+        
+      
