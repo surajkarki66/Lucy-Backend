@@ -9,5 +9,6 @@ nltk
 json5
 numpy
 tensorflow
+pydantic[email]
 keras
 spacy==2.3.6

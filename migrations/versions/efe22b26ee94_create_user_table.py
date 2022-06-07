@@ -1,19 +1,18 @@
 """create user table
 
-Revision ID: a7eb1216afb4
-Revises: 2570a05785b2
-Create Date: 2022-06-07 08:38:30.904431
+Revision ID: efe22b26ee94
+Revises: 6341cb79c0d7
+Create Date: 2022-06-07 20:17:32.256386
 
 """
 from alembic import op
 import sqlalchemy as sa
 
-
-from app.main.models.models import Role
+from app.main.schemas.schemas import Role
 
 # revision identifiers, used by Alembic.
-revision = 'a7eb1216afb4'
-down_revision = '2570a05785b2'
+revision = 'efe22b26ee94'
+down_revision = '6341cb79c0d7'
 branch_labels = None
 depends_on = None
 
