@@ -186,6 +186,8 @@
       "intent": "fees",
       "questions": [
         "information about fee",
+        "tuition fee",
+        "fee of computer engineering",
         "information on fee",
         "tell me the fee",
         "college fee",
@@ -224,6 +226,8 @@
     {
       "intent": "location",
       "questions": [
+        "where is nec",
+        "where is NEC college",
         "where is the college located",
         "college is located at",
         "where is college",
@@ -755,6 +759,11 @@
       "responses": [
         "NEC encourages all-round development of students and hence organizes vibrant fests in the campus."
       ]
+    },
+    {
+      "intent": "other",
+      "questions": ["who is bishowdep?"],
+      "responses": ["The system doesn't know about this.'"]
     }
   ]
 }

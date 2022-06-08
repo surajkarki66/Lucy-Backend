@@ -24,7 +24,7 @@ class SimpleANN:
         self.model.add(layers.Activation('relu'))
 
         #adding output layer
-        self.model.add(layers.Dense(units = 37))
+        self.model.add(layers.Dense(units = 38))
         self.model.add(layers.Activation('softmax'))
         
         self.model.summary()
