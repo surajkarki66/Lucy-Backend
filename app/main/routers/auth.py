@@ -10,11 +10,18 @@ from app.main.utility.utils import hash, verify
 from app.main.helpers.jwt_handler import signJWT
 from app.main.helpers.jwt_bearer import JWTBearer
 
+
+
+from app.main.middlewares.role_checker import RoleChecker
 from app.main.schemas.schemas import UserLoginSchema, UserSchema, UserCreateSchema,\
     TokenSchema, UserUpdateSchema, PasswordUpdateSchema
 
-router = APIRouter()
 
+
+
+router = APIRouter(prefix='/user')
+allow_view_resource = RoleChecker(["admin"])
+allow_update_resource = RoleChecker(["admin", "subscriber"])
 
 @router.post("/signup", status_code=status.HTTP_201_CREATED,
              response_model=UserSchema)
@@ -55,7 +62,7 @@ def user_login(response: Response, user: UserLoginSchema, db: Session = Depends(
 
 
 @router.get('/get', response_model=List[UserSchema],
-            dependencies=[Depends(JWTBearer())])
+            dependencies=[Depends(allow_view_resource)])
 def get_users(db: Session = Depends(get_db), limit: int = 10,
               skip: int = 0) -> List[dict]:
     users = db.query(User).limit(limit).offset(skip).all()
@@ -63,7 +70,7 @@ def get_users(db: Session = Depends(get_db), limit: int = 10,
 
 
 @router.get('/{id}', response_model=UserSchema,
-            dependencies=[Depends(JWTBearer())])
+            dependencies=[Depends(allow_view_resource)])
 def get_one_user(id: int, db: Session = Depends(get_db)) -> dict:
     user = db.query(User).filter(User.id == id).first()
     if not user:
@@ -75,7 +82,7 @@ def get_one_user(id: int, db: Session = Depends(get_db)) -> dict:
 
 @router.delete("/{id}", status_code=status.HTTP_204_NO_CONTENT)
 def delete_user(id: int, db: Session = Depends(get_db),
-                current_user: dict = Depends(JWTBearer())) -> dict:
+                current_user: UserSchema = Depends(allow_update_resource)) -> dict:
 
     user_query = db.query(User).filter(User.id == id)
 
@@ -85,10 +92,10 @@ def delete_user(id: int, db: Session = Depends(get_db),
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,
                             detail=f"user with id: {id} does not exist")
 
-    if id != current_user["user_id"]:
-        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN,
-                            detail="Not authorized to perform requested \
-                                action")
+    if current_user.role != "admin":
+        if  id != current_user.id:
+            raise HTTPException(status_code=status.HTTP_403_FORBIDDEN,
+                                detail="Not authorized to perform requested action")
 
     user_query.delete(synchronize_session=False)
     db.commit()
@@ -98,7 +105,7 @@ def delete_user(id: int, db: Session = Depends(get_db),
 @router.patch("/{id}", response_model=UserSchema)
 def update_user(id: int, updated_post: UserUpdateSchema,
                 db: Session = Depends(get_db),
-                current_user: dict = Depends(JWTBearer())):
+                current_user: UserSchema = Depends(allow_update_resource)):
 
     user_query = db.query(User).filter(User.id == id)
 
@@ -108,11 +115,11 @@ def update_user(id: int, updated_post: UserUpdateSchema,
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,
                             detail=f"user with id: {id} does not exist")
 
-    if id != current_user["user_id"]:
-        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN,
-                            detail="Not authorized to perform requested\
-                                action")
-
+    if current_user.role != "admin":
+        if  id != current_user.id:
+            raise HTTPException(status_code=status.HTTP_403_FORBIDDEN,
+                                detail="Not authorized to perform requested action")
+                                
     user_query.update(updated_post.dict(), synchronize_session=False)
 
     db.commit()
@@ -123,7 +130,7 @@ def update_user(id: int, updated_post: UserUpdateSchema,
 @router.patch("/change_password/{id}", response_model=UserSchema)
 def change_password(id: int, updated_user: PasswordUpdateSchema,
                     db: Session = Depends(get_db),
-                    current_user: dict = Depends(JWTBearer())):
+                    current_user: UserSchema = Depends(allow_update_resource)):
 
     user_query = db.query(User).filter(User.id == id)
 
@@ -133,10 +140,10 @@ def change_password(id: int, updated_user: PasswordUpdateSchema,
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,
                             detail=f"user with id: {id} does not exist")
 
-    if id != current_user["user_id"]:
-        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN,
-                            detail="Not authorized to perform requested\
-                                 action")
+    if current_user.role != "admin":
+        if  id != current_user.id:
+            raise HTTPException(status_code=status.HTTP_403_FORBIDDEN,
+                                detail="Not authorized to perform requested action")
 
     if not verify(updated_user.old_password, user.password):
         raise HTTPException(

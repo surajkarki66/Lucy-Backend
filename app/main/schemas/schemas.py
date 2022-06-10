@@ -3,37 +3,11 @@ from datetime import datetime
 from pydantic import BaseModel, Field, EmailStr, validator, SecretStr
 from enum import Enum
 
-class GetBotResponseSchema(BaseModel):
-    message: str = Field(...)
 
-
+# User
 class Role(str, Enum):
     subscriber = "subscriber"
     admin = "admin"
-
-
-class FeedbackBase(BaseModel):
-    person_name: str = Field(..., min_length=2, max_length=255)
-    email: EmailStr = Field(...)
-    message: str = Field(...)
-
-    class Config:
-        orm_mode = True
-
-
-class FeedbackCreateSchema(FeedbackBase):
-    pass
-
-
-class FeedbackSchema(FeedbackBase):
-    id: int = Field(...)
-
-    @validator("id")
-    def validate_id(cls, v):
-        if v < 0:
-            raise ValueError("id must be zero and greater than zero")
-        return 
-
 
 class UserCreateSchema(BaseModel):
     first_name: str = Field(..., min_length=2, max_length=32)
@@ -51,12 +25,6 @@ class UserSchema(BaseModel):
     role: Role = Field(...)
     created_at: datetime = Field(...)
     updated_at: datetime = Field(...)
-
-    @validator("id")
-    def validate_id(cls, v):
-        if v < 0:
-            raise ValueError("id must be zero and greater than zero")
-        return v
 
     class Config:
         orm_mode = True
@@ -81,3 +49,32 @@ class UserUpdateSchema(BaseModel):
 class PasswordUpdateSchema(BaseModel):
     old_password: str = Field(..., min_length=6)
     password: str = Field(..., min_length=6)
+
+
+
+
+# Feedback
+
+class FeedbackBase(BaseModel):
+    person_name: str = Field(..., min_length=2, max_length=255)
+    email: EmailStr = Field(...)
+    message: str = Field(...)
+
+    class Config:
+        orm_mode = True
+
+class FeedbackCreateSchema(FeedbackBase):
+    pass
+
+   
+
+class FeedbackSchema(FeedbackBase):
+    id: int = Field(...)
+
+    
+
+
+# Bot
+class GetBotResponseSchema(BaseModel):
+    message: str = Field(...)
+
