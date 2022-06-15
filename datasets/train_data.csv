@@ -1,0 +1,443 @@
+text,intent
+Hi,greeting
+How are you,greeting
+Is anyone there?,greeting
+Hello,greeting
+Good day,greeting
+Whats up,greeting
+how are ya,greeting
+heyy,greeting
+whatsup,greeting
+cya,goodbye
+see you,goodbye
+bye bye,goodbye
+See you later,goodbye
+Goodbye,goodbye
+I am Leaving,goodbye
+Bye,goodbye
+Have a Good day,goodbye
+talk to you later,goodbye
+tyyl,goodbye
+i got to go,goodbye
+gtg,goodbye
+what is the name of your developers,creator
+what is the name of your creators,creator
+what is the name of the developers,creator
+what is the name of the creators,creator
+who created you,creator
+your developers,creator
+your creators,creator
+who are your developers,creator
+developers,creator
+you are made by,creator
+you are made by whom,creator
+who created you,creator
+who create you,creator
+creators,creator
+who made you,creator
+who designed you,creator
+name,name
+your name,name
+do you have a name,name
+what are you called,name
+what is your name,name
+what should I call you,name
+whats your name?,name
+what are you,name
+who are you,name
+who is this,name
+what am i chatting to,name
+who am i taking to,name
+what are you,name
+timing of college,hours
+what is college timing,hours
+working days,hours
+when are you guys open,hours
+what are your hours,hours
+hours of operation,hours
+when is the college open,hours
+college timing,hours
+what about college timing,hours
+is college open on saturday,hours
+tell something about college timing,hours
+what is the college  hours,hours
+when should i come to college,hours
+when should i attend college,hours
+what is my college time,hours
+college timing,hours
+timing college,hours
+more info,number
+contact info,number
+how to contact college,number
+college telephone number,number
+college number,number
+What is your contact no,number
+Contact number?,number
+how to call you,number
+College phone no?,number
+how can i contact you,number
+Can i get your phone number,number
+how can i call you,number
+phone number,number
+phone no,number
+call,number
+list of courses,course
+list of courses offered,course
+list of courses offered in NEC,course
+what are the courses offered in your college?,course
+courses?,course
+courses offered,course
+courses offered in NEC,course
+courses you offer,course
+branches?,course
+courses available at NEC?,course
+branches available at NEC?,course
+what are the courses in NEC?,course
+what are branches in NEC?,course
+what are courses in NEC?,course
+branches available in NEC?,course
+can you tell me the courses available in NEC?,course
+can you tell me the branches available in NEC?,course
+Civil engineering?,course
+Computer engineering?,course
+IT engineering?,course
+Mechanical engineering?,course
+EXTC engineering?,course
+Electrical engineering?,course
+Electronics engineering?,course
+Civil and Rural engineering?,course
+civil,course
+it,course
+IT,course
+Computer,course
+Mechanical,course
+EXTC,course
+Electrical,course
+Comps,course
+Architecture,course
+information about fee,fees
+tuition fee,fees
+fee of computer engineering,fees
+information on fee,fees
+tell me the fee,fees
+college fee,fees
+fee per semester,fees
+what is the fee of each semester,fees
+what is the fees of each year,fees
+what is fee,fees
+what is the fees,fees
+how much is the fees,fees
+fees for first year,fees
+fees,fees
+about the fees,fees
+tell me something about the fees,fees
+fees fe,fees
+fees se,fees
+fees te,fees
+fees be,fees
+fees me,fees
+fees comps,fees
+fees it,fees
+fees mech,fees
+fees electrical,fees
+fees computer,fees
+fees mechanical,fees
+fees automobile,fees
+fees open fe,fees
+fees open se,fees
+fees open te,fees
+fees open be,fees
+where is nec,location
+where is NEC college,location
+where is the college located,location
+college is located at,location
+where is college,location
+where is college located,location
+address of college,location
+how to reach college,location
+college location,location
+college address,location
+wheres the college,location
+how can I reach college,location
+whats is the college address,location
+what is the address of college,location
+address,location
+location,location
+hostel facility,hostel
+hostel servive,hostel
+hostel location,hostel
+hostel address,hostel
+hostel facilities,hostel
+hostel fees,hostel
+Does college provide hostel,hostel
+Is there any hostel,hostel
+Where is hostel,hostel
+do you have hostel,hostel
+do you guys have hostel,hostel
+hostel,hostel
+hostel capacity,hostel
+what is the hostel fee,hostel
+how to get in hostel,hostel
+what is the hostel address,hostel
+how far is hostel from college,hostel
+hostel college distance,hostel
+where is the hostel,hostel
+how big is the hostel,hostel
+distance between college and hostel,hostel
+distance between hostel and college,hostel
+infrastructure,infrastructure
+building,infrastructure
+number of floors in bulding,infrastructure
+college infrastructure,infrastructure
+departments and labs,infrastructure
+departments,infrastructure
+labs,infrastructure
+canteen,infrastructure
+infrastructure NEC,infrastructure
+tell me about infrastructure,infrastructure
+what about infrastructure,infrastructure
+events organised,event
+list of events,event
+list of events organised in college,event
+list of events conducted in college,event
+What events are conducted in college,event
+Are there any event held at college,event
+Events?,event
+functions,event
+what are the events,event
+tell me about events,event
+what about events,event
+document to bring,document
+documents needed for admision,document
+documents needed at the time of admission,document
+documents needed during admission,document
+documents required for admision,document
+documents required at the time of admission,document
+documents required during admission,document
+What document are required for admission,document
+Which document to bring for admission,document
+documents,document
+what documents do i need,document
+what documents do I need for admission,document
+documents needed,document
+Syllabus for CSE,syllabus
+what is the Computer Engineering syllabus,syllabus
+syllabus,syllabus
+timetable,syllabus
+what is CSE syllabus,syllabus
+syllabus,syllabus
+What is next lecture,syllabus
+is there any library,library
+library facility,library
+library facilities,library
+do you have library,library
+does the college have library facility,library
+college library,library
+where can i get books,library
+book facility,library
+Where is library,library
+Library,library
+Tell me about library,library
+how many libraries,library
+food facilities,canteen
+canteen facilities,canteen
+canteen facility,canteen
+is there any canteen,canteen
+Is there a cafetaria in college,canteen
+Does college have canteen,canteen
+Where is canteen,canteen
+where is cafetaria,canteen
+canteen,canteen
+Cafetaria,canteen
+food menu,menu
+food in canteen,menu
+Whats there on menu,menu
+what is available in college canteen,menu
+what foods can we get in college canteen,menu
+What is college placement,placement
+Which companies visit in college,placement
+What is average package,placement
+companies visit,placement
+package,placement
+placement,placement
+recruitment,placement
+companies,placement
+Who is CSE HOD,csehod
+Where is CSE HOD,csehod
+CSE hod,csehod
+name of CSE hod,csehod
+what is the name of principal,principal
+whatv is the principal name,principal
+principal name,principal
+Who is college principal,principal
+Where is principal's office,principal
+principal,principal
+name of principal,principal
+what is the process of admission,admission
+what is the admission process,admission
+How to take admission in your college,admission
+What is the process for admission,admission
+admission,admission
+admission process,admission
+eligibility for admission,admission
+eligibility,admission
+what is the eligibility,admission
+eligibility criteria,admission
+eligibility criteria for enigineering,admission
+admission engineering,admission
+What facilities college provide,facilities
+College facility,facilities
+What are college facilities,facilities
+facilities,facilities
+facilities provided,facilities
+max number of students,college intake
+number of seats per branch,college intake
+number of seats in each branch,college intake
+maximum number of seats,college intake
+maximum students intake,college intake
+What is college intake,college intake
+how many stundent are taken in each branch,college intake
+seat allotment,college intake
+seats,college intake
+college dress code,uniform
+college dresscode,uniform
+what is the uniform,uniform
+can we wear casuals,uniform
+Does college have an uniform,uniform
+Is there any uniform,uniform
+uniform,uniform
+what about uniform,uniform
+do we have to wear uniform,uniform
+I love you,random
+Will you marry me,random
+Do you love me,random
+fuck,swear
+bitch,swear
+shut up,swear
+hell,swear
+stupid,swear
+idiot,swear
+dumb ass,swear
+asshole,swear
+fucker,swear
+okk,salutaion
+okie,salutaion
+nice work,salutaion
+well done,salutaion
+good job,salutaion
+thanks for the help,salutaion
+Thank You,salutaion
+its ok,salutaion
+Thanks,salutaion
+k,salutaion
+ok,salutaion
+okay,salutaion
+what can you do,task
+what are the thing you can do,task
+things you can do,task
+what can u do for me,task
+how u can help me,task
+why i should use you,task
+ragging,ragging
+is ragging practice active in college,ragging
+does college have any antiragging facility,ragging
+is there any ragging cases,ragging
+is ragging done here,ragging
+ragging juniors,ragging
+ragging history,ragging
+ragging incidents,ragging
+hod,hod
+hod name,hod
+who is the hod,hod
+dtc bus route,transport
+mode of transportation,transport
+how to get to college,transport
+buses for college,transport
+college buses,transport
+bus routes,transport
+list of buses for travelling,transport
+scholarship,scholarship
+Is scholarship available,scholarship
+scholarship engineering,scholarship
+available scholarships,scholarship
+scholarship for computer engineering,scholarship
+scholarship for civil and rural engineering,scholarship
+scholarship for electronincs engineering,scholarship
+scholarship for civil engineering,scholarship
+scholarship for architecture,scholarship
+scholarship for electrical engineering,scholarship
+list of scholarship,scholarship
+comps scholarship,scholarship
+civil and rural scholarship,scholarship
+electronincs scholarship,scholarship
+civil scholarship,scholarship
+electrical scholarship,scholarship
+first year scholarship,scholarship
+second year scholarship,scholarship
+third year scholarship,scholarship
+fourth year scholarship,scholarship
+faculty,faculty
+faculty details,faculty
+computer faculty,faculty
+Civil and rural faculty,faculty
+electronics faculty,faculty
+electrical faculty,faculty
+civil faculty,faculty
+engineering faculty,faculty
+list of faculty,faculty
+first year faculty,faculty
+second year faculty,faculty
+third year faculty,faculty
+fourth year  faculty,faculty
+give faculty details,faculty
+tell me about the faculty,faculty
+how is the faculty,faculty
+staff,faculty
+please give information about faculty,faculty
+faculty information,faculty
+faculty?,faculty
+student portal,student portal
+give student portal link,student portal
+student portal?,student portal
+where is student portal,student portal
+NEC student portal,student portal
+how to get student portal,student portal
+where to get fees receipt,student portal
+please provide student portal link,student portal
+where to login,student portal
+faculty portal,faculty portal
+give student faculty link,faculty portal
+faculty portal?,faculty portal
+where is faculty portal,faculty portal
+NEC fcaulty portal,faculty portal
+how to get faculty portal,faculty portal
+please provide faculty portal link,faculty portal
+sports and games,sports
+give sports details,sports
+sports infrastructure,sports
+sports facilities,sports
+NEC sports facilities,sports
+information about sports,sports
+please provide sports and games information,sports
+fests,fest
+college fest,fest
+euforia,fest
+tech euforia,fest
+NEC fests,fest
+information fest,fest
+please provide fests information,fest
+euforia information,fest
+tech euforia information,fest
+tell me about college fests,fest
+tell me about tech euforia,fest
+tell me about euforia,fest
+information euforia,fest
+please provide euforia information,fest
+please provide tech euforia information,fest
+tech euforia details,fest
+euforia details,fest
+give me euforia details,fest
+give me tech euforia details,fest
+give me fests details,fest
+fests?,fest
+who is bishowdep?,other
