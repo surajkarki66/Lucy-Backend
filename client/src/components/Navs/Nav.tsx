@@ -1,13 +1,27 @@
 import "./Nav.css";
 
+import { Link } from "react-router-dom";
+
 const Nav: React.FC = () => {
   return (
     <div className="nav--container">
-      <div className="home">HOME</div>
+      <Link to="/" style={{ textDecoration: "none", color: "white" }}>
+        <div className="home">HOME </div>
+      </Link>
+
       <li className="navigation">
-        <ul>About</ul>
-        <ul>Contact</ul>
-        <ul>Feedback</ul>
+        <Link to="/chat" style={{ textDecoration: "none", color: "white" }}>
+          <ul> Chat</ul>
+        </Link>
+        <Link to="/aboutUs" style={{ textDecoration: "none", color: "white" }}>
+          <ul> About</ul>
+        </Link>
+        <Link to="/contact" style={{ textDecoration: "none", color: "white" }}>
+          <ul> Contact</ul>
+        </Link>
+        <Link to="/feedback" style={{ textDecoration: "none", color: "white" }}>
+          <ul> Feedback</ul>
+        </Link>
       </li>
     </div>
   );
