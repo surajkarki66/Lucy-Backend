@@ -1,11 +1,7 @@
 import Chat from "../components/Chat/Chat";
 
 const ChatPage: React.FC = () => {
-  return (
-    <>
-      <Chat />
-    </>
-  );
+  return <Chat />;
 };
 
 export default ChatPage;

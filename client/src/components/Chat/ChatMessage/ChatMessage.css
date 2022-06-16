@@ -9,6 +9,7 @@
 }
 
 .chat--sent--message p {
+  font-size: 15px;
   padding: 0.5rem;
   background-color: whitesmoke;
   border: 1px solid black;
@@ -22,4 +23,5 @@
 .chat--logo {
   width: 2rem;
   padding-right: 6px;
+  padding-left: 2px;
 }
