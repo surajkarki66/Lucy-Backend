@@ -1,0 +1,25 @@
+.chat--message-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  top: 7em;
+  right: 1rem;
+  border-radius: 15px;
+}
+
+.chat--sent--message p {
+  padding: 0.5rem;
+  background-color: whitesmoke;
+  border: 1px solid black;
+  color: black;
+  text-align: center;
+}
+
+.chat--sent--message span {
+  padding: 10px;
+}
+.chat--logo {
+  width: 2rem;
+  padding-right: 6px;
+}

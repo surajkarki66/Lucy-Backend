@@ -1,6 +1,6 @@
 import "./Nav.css";
 
-function Nav() {
+const Nav: React.FC = () => {
   return (
     <div className="nav--container">
       <div className="home">HOME</div>
@@ -11,6 +11,6 @@ function Nav() {
       </li>
     </div>
   );
-}
+};
 
 export default Nav;
