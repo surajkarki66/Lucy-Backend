@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 
 import Nav from "./components/Navs/Nav";
 import Home from "./pages/Home/Home";
-import ChatPage from "./pages/ChatPage";
+import ChatPage from "./pages/ChatPage/ChatPage";
 
 const App: React.FC = () => {
   const routes = (
@@ -12,10 +12,10 @@ const App: React.FC = () => {
     </Routes>
   );
   return (
-    <div>
+    <>
       <Nav />
       {routes}
-    </div>
+    </>
   );
 };
 
