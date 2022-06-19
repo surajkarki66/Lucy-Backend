@@ -12,7 +12,7 @@ def get_application():
 
     _app.include_router(IncludeAPIRouter())
 
-    origins = ["*"]
+    origins = ["http://localhost:3000"]
 
     _app.add_middleware(
         CORSMiddleware,
