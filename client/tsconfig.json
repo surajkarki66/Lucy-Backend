@@ -16,5 +16,5 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src", "axios-url.ts"]
+  "include": ["src", "src/axios-url.ts"]
 }
