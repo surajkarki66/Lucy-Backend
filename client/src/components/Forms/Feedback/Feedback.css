@@ -5,9 +5,21 @@
   justify-content: center;
 }
 
-.form > h2 {
-  margin-bottom: 30px;
+.form > h1 {
+  text-transform: uppercase;
+  font-size: 30px;
+  color: black;
+  margin-bottom: 38px;
   text-align: center;
+}
+.form > h1::after {
+  content: "";
+  height: 5px;
+  width: 102px;
+  background-color: black;
+  border-radius: 25px;
+  display: block;
+  margin: auto;
 }
 
 .form > input,

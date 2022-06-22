@@ -27,7 +27,7 @@ const Feedback: React.FC<PropsType> = ({ createFeedback, loading }) => {
 
   return (
     <form className="form" onSubmit={handleSubmit}>
-      <h2>Give your Feedback</h2>
+      <h1>Feedback</h1>
       <label>Person Name</label>
       <input
         type="text"

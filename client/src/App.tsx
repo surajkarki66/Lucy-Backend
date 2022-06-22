@@ -6,6 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Home from "./pages/Home/Home";
 import ChatPage from "./pages/ChatPage/ChatPage";
 import FeedbackPage from "./pages/Feedback/FeedbackPage";
+import AboutUs from "./pages/AboutUs/AboutUs";
 
 const App: React.FC = () => {
   const routes = (
@@ -13,6 +14,7 @@ const App: React.FC = () => {
       <Route path="/" element={<Home />} />
       <Route path="/chat" element={<ChatPage />} />
       <Route path="/feedback" element={<FeedbackPage />} />
+      <Route path="/aboutUs" element={<AboutUs />} />
     </Routes>
   );
   return (

@@ -27,7 +27,7 @@
   float: left;
 }
 
-img {
+.msgs img {
   border-radius: 50%;
   height: 45px;
   margin-top: -20px;
@@ -89,7 +89,7 @@ p {
   .received {
     padding: 10px 10px 0 10px;
   }
-  img {
+  .msgs img {
     height: 35px;
     margin-top: -10px;
   }
@@ -105,7 +105,7 @@ p {
   .received {
     padding: 7px 7px 0 7px;
   }
-  img {
+  .msgs img {
     height: 30px;
     margin-top: -7px;
   }
