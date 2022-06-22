@@ -1,0 +1,113 @@
+.section {
+  width: 100%;
+}
+
+.section .container {
+  width: 80%;
+  display: block;
+  margin: 0px auto;
+  padding: 30px 0px;
+}
+
+.container .title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.container .title h1 {
+  text-transform: uppercase;
+  font-size: 30px;
+  color: black;
+}
+
+.container .title h1::after {
+  content: "";
+  height: 5px;
+  width: 100px;
+  background-color: black;
+  border-radius: 25px;
+  display: block;
+  margin: auto;
+}
+.content {
+  float: left;
+  width: 55%;
+}
+
+.image-section {
+  float: right;
+  width: 40%;
+}
+.image-section img {
+  width: 100%;
+  height: auto;
+}
+
+.content .article h3 {
+  color: #a3a3a3;
+  font-size: 17px;
+}
+
+.content .article p {
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.content .article .button {
+  margin-top: 50px;
+}
+.content .article .button a {
+  text-decoration: none;
+  border: none;
+  background: #2a80b9;
+  padding: 9px 25px;
+  cursor: pointer;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 17px;
+}
+
+.content .article .button a:hover {
+  color: white;
+  opacity: 0.8;
+  transform: scale(1.02);
+}
+
+@media screen and (max-width: 768px) {
+  .section .container {
+    width: 80%;
+    display: block;
+    margin: auto;
+  }
+  .content {
+    float: none;
+    width: 100%;
+    display: block;
+    margin: auto;
+  }
+  .image-section {
+    float: none;
+    width: 100%;
+    margin-top: 50px;
+  }
+  .image-section img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+  .container .title h1 {
+    text-align: center;
+    font-size: 30px;
+  }
+  .container .article .button {
+    text-align: center;
+  }
+  .container .article .button a {
+    padding: 6px 15px;
+    font-size: 16px;
+  }
+}
