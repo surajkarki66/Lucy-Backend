@@ -16,9 +16,6 @@ const Nav: React.FC = () => {
         <Link to="/aboutUs" style={{ textDecoration: "none", color: "white" }}>
           <ul> About</ul>
         </Link>
-        <Link to="/contact" style={{ textDecoration: "none", color: "white" }}>
-          <ul> Contact</ul>
-        </Link>
         <Link to="/feedback" style={{ textDecoration: "none", color: "white" }}>
           <ul> Feedback</ul>
         </Link>
