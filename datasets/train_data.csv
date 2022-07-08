@@ -4,10 +4,13 @@ How are you,greeting
 Is anyone there?,greeting
 Hello,greeting
 Good day,greeting
+Welcome back,greeting
 Whats up,greeting
 how are ya,greeting
 heyy,greeting
 whatsup,greeting
+Have a great rest of your day,goodbye
+It was a pleasure seeing you,goodbye
 cya,goodbye
 see you,goodbye
 bye bye,goodbye
@@ -20,12 +23,16 @@ talk to you later,goodbye
 tyyl,goodbye
 i got to go,goodbye
 gtg,goodbye
+Have fun,goodbye
+Gotta go,goodbye
+Keep in touch,goodbye
 what is the name of your developers,creator
 what is the name of your creators,creator
 what is the name of the developers,creator
 what is the name of the creators,creator
 who created you,creator
 your developers,creator
+what is your father's name,creator
 your creators,creator
 who are your developers,creator
 developers,creator
@@ -33,10 +40,13 @@ you are made by,creator
 you are made by whom,creator
 who created you,creator
 who create you,creator
+parents,creator
 creators,creator
 who made you,creator
 who designed you,creator
 name,name
+introduce yourself,name
+why don't you introduce yourself,name
 your name,name
 do you have a name,name
 what are you called,name

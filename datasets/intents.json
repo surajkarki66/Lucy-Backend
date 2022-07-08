@@ -1,0 +1,234 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "responses": [
+        "Hello!",
+        "Good to see you again!",
+        "Hi there, how can I help?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "responses": [
+        "Sad to see you go :(",
+        "Talk to you later",
+        "Goodbye!",
+        "Come back soon"
+      ]
+    },
+    {
+      "tag": "creator",
+      "responses": [
+        "Suraj, Saman and Rupesh developed me in 2022, for their second college project"
+      ]
+    },
+    {
+      "tag": "name",
+      "responses": [
+        "You can call me NEC Chatbot.",
+        "I'm College Enquiry Chatbot",
+        "I'm NEC Chatbot aka College Enquiry Chatbot"
+      ]
+    },
+    {
+      "tag": "hours",
+      "responses": ["College is open 9am-5pm Monday-Friday!"]
+    },
+    {
+      "tag": "number",
+      "responses": ["You can contact at +(977)01-5221006"]
+    },
+    {
+      "tag": "course",
+      "responses": [
+        "Bachelors Programmes provided are Computer Engineering, Civil Engineering, Electrical Engineering, Electronics Engineering, Civil and Rural Engineering.For more details visit<a target=\"_blank\" href=\"https://nec.edu.np/index.php?option=com_content&view=article&id=63&Itemid=69\"> here</a>"
+      ]
+    },
+    {
+      "tag": "fees",
+      "responses": [
+        "For Fee details visit <a target=\"_blank\" href=\"https://entrance.nec.edu.np/apply/public/downloads/prospectus.pdf\"> here</a>"
+      ]
+    },
+    {
+      "tag": "location",
+      "responses": [
+        "Changunarayan, Bhaktapur, Nepal. For more details visit <a target=\"_blank\" href=\"https://nec.edu.np/index.php?option=com_content&view=article&id=300&Itemid=119\"> here</a>"
+      ]
+    },
+    {
+      "tag": "hostel",
+      "responses": [
+        "NEC provides safe and affordable hostel facilities for boys and girls"
+      ]
+    },
+    {
+      "tag": "infrastructure",
+      "responses": [
+        "For infrastructure details visit <a target=\"_blank\" href=\"https://nec.edu.np/\"> here</a>"
+      ]
+    },
+    {
+      "tag": "event",
+      "responses": [
+        "Our college organizes various events during academics.Many Events are useful for technical skils and placements activities.There are many events which are held by deparments.<a target=\"_blank\" href=\"https://nec.edu.np/index.php?option=com_content&view=category&layout=blog&id=34&Itemid=53\"> here</a>",
+        "Our NEC organizes FESTIVAL every year"
+      ]
+    },
+    {
+      "tag": "document",
+      "responses": [
+        "To know more about documents required visit<a target=\"_blank\" href=\"https://entrance.nec.edu.np/apply/public/\"> here</a>"
+      ]
+    },
+    {
+      "tag": "syllabus",
+      "responses": [
+        "Syllabus of all years and departments is available in the link below. <a target=\"_blank\" href=\"https://pu.edu.np/programlevel/st-bachelor/\"> here</a>"
+      ]
+    },
+    {
+      "tag": "library",
+      "responses": [
+        "NEC has a huge and spacious library on the ground floor of CSE department."
+      ]
+    },
+    {
+      "tag": "canteen",
+      "responses": ["NEC has canteen with variety of food available."]
+    },
+    {
+      "tag": "menu",
+      "responses": [
+        "The college canteen serves Tea, Coffee, Mo:Mo, Samosa, Dal Rice and many more dishes."
+      ]
+    },
+    {
+      "tag": "placement",
+      "responses": [
+        "Various companies are coming to recruit our students and offer maximum packages.MAIN RECRUITERS are Leapfrog,hamrobazar e.t.c"
+      ]
+    },
+    {
+      "tag": "csehod",
+      "responses": [
+        "Mr. Sundar Kunwar is CSE HOD who is available on the 1st floor."
+      ]
+    },
+    {
+      "tag": "principal",
+      "responses": [
+        "Dr. Hari Krishna Shrestha is college principal who is available on Ground floor of Civil Department."
+      ]
+    },
+    {
+      "tag": "admission",
+      "responses": [
+        "Application can also be submitted online through the NEC website. Refer <a href=https://entrance.nec.edu.np/apply/public/>website</a>"
+      ]
+    },
+    {
+      "tag": "facilities",
+      "responses": [
+        "NEC provides Labs with internet connection, smart classroom, Auditorium, library,canteen. Labs are equipped with modern technologies. Also there is bus facility for the students and faculty"
+      ]
+    },
+    {
+      "tag": "college intake",
+      "responses": [
+        "For Computer and Civil, the intake is 96 and 144 respectively.For Electrical and Civil and Rural is 48 per batch "
+      ]
+    },
+    {
+      "tag": "uniform",
+      "responses": [
+        "NEC does have an uniform but it is not compulsory. Link <a target=\"_blank\" href=\"#\">here</a>"
+      ]
+    },
+    {
+      "tag": "random",
+      "responses": ["I am not program for this please ask appropriate query"]
+    },
+    {
+      "tag": "swear",
+      "responses": [
+        "please use appropriate language",
+        "Maintaining decency would be appreciated"
+      ]
+    },
+    {
+      "tag": "salutation",
+      "responses": [
+        "I am glad I helped you",
+        "welcome, anything else i can assist you with?"
+      ]
+    },
+    {
+      "tag": "task",
+      "responses": [
+        "I can answer to intermediate  regarding college",
+        "You can ask me  regarding college, and i will try to answer them"
+      ]
+    },
+    {
+      "tag": "ragging",
+      "responses": [
+        "We are Proud to tell you that our college provides ragging free environment, and we have strict rules against ragging"
+      ]
+    },
+    {
+      "tag": "hod",
+      "responses": [
+        "HODs differ for each branch, please be more specific like: (HOD CSE)"
+      ]
+    },
+    {
+      "tag": "transport",
+      "responses": [
+        "NEC provides bus facility to students through various places. Details <a target=\"_blank\" href=\"https://nec.edu.np/images/stories/10042022busroute.jpg\"> here</a>"
+      ]
+    },
+    {
+      "tag": "scholarship",
+      "responses": [
+        "Many government scholarships are supported by NEC. For details and updates visit <a target=\"_blank\" href=\"https://entrance.nec.edu.np/apply/public/\">here</a>"
+      ]
+    },
+    {
+      "tag": "faculty",
+      "responses": [
+        "NEC has a highly qualified and experienced faculty. For details visit <a target=\"_blank\" href=/\"https://nec.edu.np/index.php?option=com_content&view=category&id=51&Itemid=132\">here</a>"
+      ]
+    },
+    {
+      "tag": "student portal",
+      "responses": [
+        "For student portal link visit<a target=\"_blank\" href=/\"https://entrance.nec.edu.np/apply/public/\">here</a>"
+      ]
+    },
+    {
+      "tag": "faculty portal",
+      "responses": [
+        "For Faculty portal link visit<a target=\"_blank\" href=/\"https://nec.edu.np/index.php?option=com_content&view=category&id=51&Itemid=132\">here</a>"
+      ]
+    },
+    {
+      "tag": "sports",
+      "responses": [
+        "NEC encourages all-round development of students and hence provides sports facilities in the campus."
+      ]
+    },
+    {
+      "tag": "fest",
+      "responses": [
+        "NEC encourages all-round development of students and hence organizes vibrant fests in the campus."
+      ]
+    },
+    {
+      "tag": "other",
+      "": ["who is bishowdep?"],
+      "responses": ["The system doesn't know about this.'"]
+    }
+  ]
+}

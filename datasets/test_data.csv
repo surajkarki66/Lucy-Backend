@@ -1,0 +1,13 @@
+text,intent
+hello there,greeting
+How is everything,greeting
+How’s everything going,greeting
+Good to see you,greeting
+How you doing,greeting
+Have a nice day,goodbye
+It was a pleasure speaking with you,goodbye
+I’ll see you then,goodbye
+who created you,creator
+who is your father,creator
+who are your parents,creator
+who am i talking to,name
