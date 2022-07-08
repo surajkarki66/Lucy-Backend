@@ -23,3 +23,7 @@ archive.zip
 # vim temporary files
 *~
 .*.sw?
+
+#lucy_models/
+lucy_models/lucy_distilbert_cpu.pth
+lucy_models/lucy_distilbert_cuda.pth
