@@ -10,7 +10,6 @@ numpy
 torch
 transformers
 pydantic[email]
-spacy==2.3.6
 datetime
 passlib
 PyJWT

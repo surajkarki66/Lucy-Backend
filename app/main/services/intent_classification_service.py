@@ -1,5 +1,6 @@
 import re
 import json
+import random
 import torch
 import pickle
 import numpy as np
@@ -69,11 +70,14 @@ class IntentClassificationService(object):
 
     def get_response(self, message): 
         intent = self.predict(message)
+        result = None
+        links = []
+      
         for i in self.intents_to_response['intents']: 
             if i["tag"] == intent:
                 result = random.choice(i["responses"])
                 break
-        return result
+        return result, i["links"]
 
 
         
