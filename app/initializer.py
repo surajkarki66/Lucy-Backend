@@ -7,10 +7,10 @@ class IncludeAPIRouter(object):
         from app.main.routers.auth import router as router_auth
         
         router = APIRouter()
-        router.include_router(router_hello_world, prefix='/api/v1', tags=['hello_world'])
-        router.include_router(router_chat_bot, prefix='/api/v1', tags=['chat_bot'])
-        router.include_router(router_feedback, prefix='/api/v1', tags=['feedback'])
-        router.include_router(router_auth, prefix="/api/v1", tags=["auth"])
+        router.include_router(router_hello_world, prefix='/api/v2', tags=['hello_world'])
+        router.include_router(router_chat_bot, prefix='/api/v2', tags=['chat_bot'])
+        router.include_router(router_feedback, prefix='/api/v2', tags=['feedback'])
+        router.include_router(router_auth, prefix="/api/v2", tags=["auth"])
 
         return router
 

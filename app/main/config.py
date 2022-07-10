@@ -16,6 +16,7 @@ class Settings(BaseSettings):
     ALGORITHM: str
     HOST: str
     PORT: int
+    DEVICE: str
 
     class Config:
         env_file = ".env"

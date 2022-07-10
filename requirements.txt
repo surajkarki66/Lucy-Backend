@@ -5,12 +5,11 @@ pydantic
 python-dotenv
 sqlalchemy
 uvicorn
-nltk
 json5
 numpy
-tensorflow
+torch
+transformers
 pydantic[email]
-keras
 spacy==2.3.6
 datetime
 passlib

@@ -13,7 +13,5 @@ router = APIRouter(prefix='/bot')
 @router.get("/chat", status_code=status.HTTP_200_OK, response_model=GetBotResponseSchema)
 def get_bot_response(message: str) -> dict : 
     inp_x=message.lower()
-    results = classification_service.predict(inp_x)
-    response= classification_service.get_response(results)
-
-    return {"message": random.choice(response)}
+    response = classification_service.predict(inp_x)
+    return {"message": response}
