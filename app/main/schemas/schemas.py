@@ -87,5 +87,6 @@ class IntentSchema(IntentBase):
     updated_at: datetime = Field(...)
 
 class IntentUpdateSchema(IntentBase):
+    updated_at: datetime = Field(default_factory=datetime.now)
     pass
 
