@@ -50,11 +50,7 @@ class PasswordUpdateSchema(BaseModel):
     old_password: str = Field(..., min_length=6)
     password: str = Field(..., min_length=6)
 
-
-
-
 # Feedback
-
 class FeedbackBase(BaseModel):
     person_name: str = Field(..., min_length=2, max_length=255)
     email: EmailStr = Field(...)
@@ -66,16 +62,30 @@ class FeedbackBase(BaseModel):
 class FeedbackCreateSchema(FeedbackBase):
     pass
 
-   
-
 class FeedbackSchema(FeedbackBase):
     id: int = Field(...)
 
     
-
-
 # Bot
 class GetBotResponseSchema(BaseModel):
     message: str = Field(...)
     links: list = Field(...)
+
+# Intent
+class IntentBase(BaseModel):
+    title: str = Field(..., min_length=2, max_length=255)
+    intent_no: int =Field(...)
+
+    class Config:
+        orm_mode = True
+
+class IntentCreateSchema(IntentBase):
+    pass
+
+class IntentSchema(IntentBase):
+    created_at: datetime = Field(...)
+    updated_at: datetime = Field(...)
+
+class IntentUpdateSchema(IntentBase):
+    pass
 
