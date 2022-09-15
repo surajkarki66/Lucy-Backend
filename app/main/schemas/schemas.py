@@ -44,11 +44,13 @@ class TokenSchema(BaseModel):
 class UserUpdateSchema(BaseModel):
     first_name: str = Field(..., min_length=2, max_length=32)
     last_name: str = Field(..., min_length=2, max_length=32)
+    updated_at: datetime = Field(default_factory=datetime.now)
 
 
 class PasswordUpdateSchema(BaseModel):
     old_password: str = Field(..., min_length=6)
     password: str = Field(..., min_length=6)
+    updated_at: datetime = Field(default_factory=datetime.now)
 
 # Feedback
 class FeedbackBase(BaseModel):
