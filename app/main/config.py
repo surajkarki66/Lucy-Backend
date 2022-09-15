@@ -17,6 +17,7 @@ class Settings(BaseSettings):
     HOST: str
     PORT: int
     DEVICE: str
+    MODEL_NAME: str
 
     class Config:
         env_file = ".env"
