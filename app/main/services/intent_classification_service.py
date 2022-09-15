@@ -6,10 +6,10 @@ import pickle
 import numpy as np
 
 from pathlib import Path
-from transformers import DistilBertTokenizer, DistilBertModel
+from transformers import DistilBertTokenizer, DistilBertModel, RobertaTokenizer, RobertaModel, AutoModel, BertTokenizerFast
 
 from app.main.config import settings
-from app.main.infrastructure.lucy.LucyDistilBERT import LucyDistilBERT
+from app.main.infrastructure.lucy.Lucy import Lucy
 
 
 class IntentClassificationService(object):
@@ -17,21 +17,28 @@ class IntentClassificationService(object):
     def __init__(self):
         BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
         MODELS_DIR = BASE_DIR.joinpath('lucy_models')
+        LUCY_MODEL = None
+        PRETRAINED_MODEL = None
+       
+        if settings.MODEL_NAME == "bert":
+            LUCY_MODEL = MODELS_DIR.joinpath('lucy_bert.pth')
+            PRETRAINED_MODEL = AutoModel.from_pretrained("bert-base-uncased")
+            self.TOKENIZER = BertTokenizerFast.from_pretrained("bert-base-uncased")
+        if settings.MODEL_NAME == "roberta":
+            LUCY_MODEL = MODELS_DIR.joinpath('lucy_roberta.pth')
+            PRETRAINED_MODEL = RobertaModel.from_pretrained("roberta-base")
+            self.TOKENIZER = RobertaTokenizer.from_pretrained("roberta-base")
+        if settings.MODEL_NAME == "distilbert":
+            LUCY_MODEL = MODELS_DIR.joinpath('lucy_distilbert.pth')
+            PRETRAINED_MODEL = DistilBertModel.from_pretrained("distilbert-base-uncased")
+            self.TOKENIZER = DistilBertTokenizer.from_pretrained("distilbert-base-uncased")
 
-        if settings.DEVICE == "cpu":
-            LUCY_MODEL = MODELS_DIR.joinpath('lucy_distilbert_cpu.pth')
-        else:
-            LUCY_MODEL = MODELS_DIR.joinpath('lucy_distilbert_cuda.pth')
-
+        # TODO: Fetching below from database
         LABELS_DIR = BASE_DIR.joinpath('datasets')
         INTENTS_TO_RESPONSE = LABELS_DIR.joinpath('intents.json')
         LABELS = LABELS_DIR.joinpath('labels.json')
 
-
-        dis_bert = DistilBertModel.from_pretrained("distilbert-base-uncased")
-        self.tokenizer = DistilBertTokenizer.from_pretrained("distilbert-base-uncased")
-
-        self.model = LucyDistilBERT(dis_bert)
+        self.model = Lucy(PRETRAINED_MODEL)
         self.model.load_state_dict(torch.load(LUCY_MODEL))
 
         with open(INTENTS_TO_RESPONSE, "r") as f:
@@ -47,7 +54,7 @@ class IntentClassificationService(object):
 
         self.model.eval()
         
-        tokens_test_data = self.tokenizer(
+        tokens_test_data = self.TOKENIZER(
                         test_text,
                         max_length = 9,
                         padding="max_length",
