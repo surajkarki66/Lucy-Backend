@@ -27,3 +27,15 @@ class Feedback(Base):
     person_name = Column(String(255), nullable=False)
     email = Column(String, nullable=False)
     message = Column(String, nullable=False)
+
+class Intent(Base):
+    __tablename__ = "intents"
+    title = Column(String(255), primary_key=True, nullable=False)
+    intent_no = Column(Integer, unique=True, nullable=False)
+    created_at = Column(TIMESTAMP(timezone=True),
+                        nullable=False, server_default=text('now()'))
+
+    updated_at = Column(TIMESTAMP(timezone=True),
+                        nullable=False, server_default=text('now()'))
+
+    
