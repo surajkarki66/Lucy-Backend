@@ -18,6 +18,12 @@ allow_create_resource = allow_update_resource
 
 @router.post("/create", status_code=status.HTTP_201_CREATED, response_model=IntentCreateSchema, dependencies=[Depends(allow_create_resource)])
 def create_intent(intent: IntentCreateSchema, db: Session = Depends(get_db) ) -> dict : 
+    intent_query = db.query(Intent).filter(Intent.title == intent.title)
+    intent_get = intent_query.first()
+    if intent_get:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST,
+                            detail=f"intent with title: {intent_get.title} already exist")
+
     new_intent = Intent(**intent.dict())
     db.add(new_intent)
     db.commit()
@@ -49,10 +55,14 @@ def update_intent(title: str, updated_intent: IntentUpdateSchema,
     intent_query = db.query(Intent).filter(Intent.title == title)
 
     intent = intent_query.first()
-
     if intent is None:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,
                             detail=f"intent with title: {title} does not exist")
+    
+    else:
+        if intent.intent_no != updated_intent.intent_no or intent.title != updated_intent.title:
+            raise HTTPException(status_code=status.HTTP_403_FORBIDDEN,
+                            detail=f"Not allowed")
                                 
     intent_query.update(updated_intent.dict(), synchronize_session=False)
 
