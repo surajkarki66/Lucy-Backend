@@ -36,16 +36,12 @@ class IntentClassificationService(object):
         # TODO: Fetching below from database
         LABELS_DIR = BASE_DIR.joinpath('datasets')
         INTENTS_TO_RESPONSE = LABELS_DIR.joinpath('intents.json')
-        LABELS = LABELS_DIR.joinpath('labels.json')
 
         self.model = Lucy(PRETRAINED_MODEL)
         self.model.load_state_dict(torch.load(LUCY_MODEL))
 
         with open(INTENTS_TO_RESPONSE, "r") as f:
             self.intents_to_response = json.load(f)
-
-        with open(LABELS, "r") as f:
-            self.labels = json.load(f)
 
 
     def predict(self, query):
@@ -70,13 +66,10 @@ class IntentClassificationService(object):
         
         pred = pred.detach().cpu().numpy()
         pred = np.argmax(pred)
-        
-        intent = self.labels[pred]
-    
-        return intent
 
-    def get_response(self, message): 
-        intent = self.predict(message)
+        return pred
+
+    def get_response(self, intent): 
         result = None
         links = []
       
