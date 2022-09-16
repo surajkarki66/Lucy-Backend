@@ -16,7 +16,7 @@ allow_update_resource = allow_view_resource
 allow_create_resource = allow_update_resource
 
 
-@router.post("/create", status_code=status.HTTP_201_CREATED, response_model=IntentCreateSchema, dependencies=[Depends(allow_create_resource)])
+@router.post("/create", status_code=status.HTTP_201_CREATED, response_model=IntentSchema, dependencies=[Depends(allow_create_resource)])
 def create_intent(intent: IntentCreateSchema, db: Session = Depends(get_db) ) -> dict : 
     intent_query = db.query(Intent).filter(Intent.title == intent.title)
     intent_get = intent_query.first()
