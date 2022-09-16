@@ -1,6 +1,7 @@
-from sqlalchemy.sql.expression import text
+from sqlalchemy.sql import expression
+from sqlalchemy.orm import relationship
 from sqlalchemy.sql.sqltypes import TIMESTAMP
-from sqlalchemy import Column, Integer, String, Enum
+from sqlalchemy import Column, Integer, String, Enum, ForeignKey
 
 from ..infrastructure.database.db import Base
 from ..schemas.schemas import Role
@@ -15,10 +16,10 @@ class User(Base):
     password = Column(String, nullable=False)
     role = Column(Enum(Role), default="subscriber")
     created_at = Column(TIMESTAMP(timezone=True),
-                        nullable=False, server_default=text('now()'))
+                        nullable=False, server_default=expression.text('now()'))
 
     updated_at = Column(TIMESTAMP(timezone=True),
-                        nullable=False, server_default=text('now()'))
+                        nullable=False, server_default=expression.text('now()'))
 
 
 class Feedback(Base):
@@ -33,9 +34,25 @@ class Intent(Base):
     title = Column(String(255), primary_key=True, nullable=False)
     intent_no = Column(Integer, unique=True, nullable=False)
     created_at = Column(TIMESTAMP(timezone=True),
-                        nullable=False, server_default=text('now()'))
+                        nullable=False, server_default=expression.text('now()'))
 
     updated_at = Column(TIMESTAMP(timezone=True),
-                        nullable=False, server_default=text('now()'))
+                        nullable=False, server_default=expression.text('now()'))
+
+class Query(Base):
+    __tablename__ = 'queries'
+    id = Column(Integer, primary_key=True, nullable=False)
+    text = Column(String(500), unique=True, nullable=False)
+    created_at = Column(TIMESTAMP(timezone=True),
+                        nullable=False, server_default=expression.text('now()'))
+
+    updated_at = Column(TIMESTAMP(timezone=True),
+                        nullable=False, server_default=expression.text('now()'))
+
+    intent = Column(String(255), ForeignKey(
+        "intents.title", ondelete="CASCADE"), nullable=False)
+
+    intent_details = relationship("Intent")
 
     
+
