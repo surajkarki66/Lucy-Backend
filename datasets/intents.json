@@ -29,8 +29,9 @@
     {
       "tag": "name",
       "responses": [
+        "You can call me Lucy",
         "You can call me NEC Chatbot.",
-        "I'm College Enquiry Chatbot",
+        "I'm College Enquiry Chatbot aka Lucy",
         "I'm NEC Chatbot aka College Enquiry Chatbot"
       ],
       "links": []
