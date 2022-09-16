@@ -50,7 +50,7 @@ def get_queries(db: Session = Depends(get_db), limit: int = 10,
 
 @router.get('/{id}', response_model=QuerySchema,
             dependencies=[Depends(allow_view_resource)])
-def get_one_query(id: int, db: Session = Depends(get_db)) -> dict:
+def get_one_query(id: str, db: Session = Depends(get_db)) -> dict:
     query = db.query(Query).filter(Query.id == id).first()
     if not query:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,
@@ -60,7 +60,7 @@ def get_one_query(id: int, db: Session = Depends(get_db)) -> dict:
 
 
 @router.patch("/{id}", response_model=QuerySchema, dependencies=[Depends(allow_update_resource)])
-def update_query(id: int, updated_query: QueryUpdateSchema,
+def update_query(id: str, updated_query: QueryUpdateSchema,
                 db: Session = Depends(get_db)):
 
     query_query = db.query(Query).filter(Query.id == id)
@@ -84,7 +84,7 @@ def update_query(id: int, updated_query: QueryUpdateSchema,
 
 
 @router.delete("/{id}", status_code=status.HTTP_204_NO_CONTENT, dependencies=[Depends(allow_update_resource)])
-def delete_query(id: int, db: Session = Depends(get_db)) -> dict:
+def delete_query(id: str, db: Session = Depends(get_db)) -> dict:
     query_query = db.query(Query).filter(Query.id == id)
     query = query_query.first()
 

@@ -34,7 +34,7 @@ def get_feedbacks(db: Session = Depends(get_db), limit: int = 10,
 
 @router.get('/{id}', response_model=FeedbackSchema,
             dependencies=[Depends(allow_view_resource)])
-def get_one_feedback(id: int, db: Session = Depends(get_db)) -> dict:
+def get_one_feedback(id: str, db: Session = Depends(get_db)) -> dict:
     feedback = db.query(Feedback).filter(Feedback.id == id).first()
     if not feedback:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,
@@ -44,7 +44,7 @@ def get_one_feedback(id: int, db: Session = Depends(get_db)) -> dict:
 
 
 @router.delete("/{id}", status_code=status.HTTP_204_NO_CONTENT, dependencies=[Depends(allow_update_resource)])
-def delete_feedback(id: int, db: Session = Depends(get_db)) -> dict:
+def delete_feedback(id: str, db: Session = Depends(get_db)) -> dict:
     feedback_query = db.query(Feedback).filter(Feedback.id == id)
     feedback = feedback_query.first()
 

@@ -1,5 +1,6 @@
 from datetime import datetime
-
+from typing import Optional
+from uuid import UUID
 from pydantic import BaseModel, Field, EmailStr, validator, SecretStr
 from enum import Enum
 
@@ -17,7 +18,7 @@ class UserCreateSchema(BaseModel):
 
 
 class UserSchema(BaseModel):
-    id: int = Field(...)
+    id: UUID = Field(...)
     first_name: str = Field(..., min_length=2, max_length=32)
     last_name: str = Field(..., min_length=2, max_length=32)
     email: EmailStr = Field(...)
@@ -65,7 +66,7 @@ class FeedbackCreateSchema(FeedbackBase):
     pass
 
 class FeedbackSchema(FeedbackBase):
-    id: int = Field(...)
+    id: UUID = Field(...)
 
     
 # Bot
@@ -104,7 +105,7 @@ class QueryCreateSchema(QueryBase):
     pass
 
 class QuerySchema(QueryBase):
-    id: int = Field(...)
+    id: UUID = Field(...)
     created_at: datetime = Field(...)
     updated_at: datetime = Field(...)
 
@@ -116,7 +117,7 @@ class QueryUpdateSchema(QueryBase):
 # Response
 class ResponseBase(BaseModel):
     text: str = Field(..., min_length=5, max_length=1000)
-    link: str = Field(None, min_length=1, max_length=255)
+    link: Optional[str] = Field(None, min_length=1, max_length=255)
     tag: str = Field(..., min_length=2, max_length=255)
 
     class Config:
@@ -126,7 +127,7 @@ class ResponseCreateSchema(ResponseBase):
     pass
 
 class ResponseSchema(ResponseBase):
-    id: int = Field(...)
+    id: UUID = Field(...)
     created_at: datetime = Field(...)
     updated_at: datetime = Field(...)
 

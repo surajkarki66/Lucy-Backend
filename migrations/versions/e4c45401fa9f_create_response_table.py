@@ -18,7 +18,7 @@ depends_on = None
 
 def upgrade() -> None:
     op.create_table('responses',
-                    sa.Column('id', sa.Integer(), nullable=False),
+                    sa.Column('id', sa.String(), nullable=False),
                     sa.Column('text', sa.String(1000), unique=True, nullable=False),
                     sa.Column('link', sa.String(255), nullable=True),
                     sa.Column('created_at', sa.TIMESTAMP(timezone=True),

@@ -19,7 +19,7 @@ depends_on = None
 
 def upgrade():
     op.create_table('feedbacks',
-                    sa.Column('id', sa.Integer(), nullable=False),
+                    sa.Column('id', sa.String(), nullable=False),
                     sa.Column('person_name', sa.String(255), nullable=False),
                     sa.Column('message', sa.String(), nullable=False),
                     sa.Column('email', sa.String(), nullable=False), 

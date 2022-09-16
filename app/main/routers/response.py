@@ -50,7 +50,7 @@ def get_responses(db: Session = Depends(get_db), limit: int = 10,
 
 @router.get('/{id}', response_model=ResponseSchema,
             dependencies=[Depends(allow_view_resource)])
-def get_one_response(id: int, db: Session = Depends(get_db)) -> dict:
+def get_one_response(id: str, db: Session = Depends(get_db)) -> dict:
     response = db.query(Response).filter(Response.id == id).first()
     if not response:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,
@@ -60,7 +60,7 @@ def get_one_response(id: int, db: Session = Depends(get_db)) -> dict:
 
 
 @router.patch("/{id}", response_model=ResponseSchema, dependencies=[Depends(allow_update_resource)])
-def update_response(id: int, updated_response: ResponseUpdateSchema,
+def update_response(id: str, updated_response: ResponseUpdateSchema,
                 db: Session = Depends(get_db)):
 
     response_query = db.query(Response).filter(Response.id == id)
@@ -84,7 +84,7 @@ def update_response(id: int, updated_response: ResponseUpdateSchema,
 
 
 @router.delete("/{id}", status_code=status.HTTP_204_NO_CONTENT, dependencies=[Depends(allow_update_resource)])
-def delete_response(id: int, db: Session = Depends(get_db)) -> dict:
+def delete_response(id: str, db: Session = Depends(get_db)) -> dict:
     response_query = db.query(Response).filter(Response.id == id)
     response = response_query.first()
 

@@ -13,3 +13,4 @@ pydantic[email]
 datetime
 passlib
 PyJWT
+uuid

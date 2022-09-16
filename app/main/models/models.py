@@ -1,3 +1,5 @@
+import uuid
+
 from sqlalchemy.sql import expression
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql.sqltypes import TIMESTAMP
@@ -7,9 +9,13 @@ from ..infrastructure.database.db import Base
 from ..schemas.schemas import Role
 
 
+def generate_uuid():
+    return str(uuid.uuid4())
+
+
 class User(Base):
     __tablename__ = "users"
-    id = Column(Integer, primary_key=True, nullable=False)
+    id = Column(String, primary_key=True, default=generate_uuid)
     first_name = Column(String(32), nullable=False)
     last_name = Column(String(32), nullable=False)
     email = Column(String, nullable=False, unique=True)
@@ -24,7 +30,7 @@ class User(Base):
 
 class Feedback(Base):
     __tablename__ = "feedbacks"
-    id = Column(Integer, primary_key=True, nullable=False)
+    id = Column(String, primary_key=True, default=generate_uuid)
     person_name = Column(String(255), nullable=False)
     email = Column(String, nullable=False)
     message = Column(String, nullable=False)
@@ -41,7 +47,7 @@ class Intent(Base):
 
 class Query(Base):
     __tablename__ = 'queries'
-    id = Column(Integer, primary_key=True, nullable=False)
+    id = Column(String, primary_key=True, default=generate_uuid)
     text = Column(String(500), unique=True, nullable=False)
     created_at = Column(TIMESTAMP(timezone=True),
                         nullable=False, server_default=expression.text('now()'))
@@ -57,7 +63,7 @@ class Query(Base):
 
 class Response(Base):
     __tablename__ = 'responses'
-    id = Column(Integer, primary_key=True, nullable=False)
+    id = Column(String, primary_key=True, default=generate_uuid)
     text = Column(String(1000), unique=True, nullable=False)
     link = Column(String(255), nullable=True)
     created_at = Column(TIMESTAMP(timezone=True),

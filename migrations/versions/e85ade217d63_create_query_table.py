@@ -18,7 +18,7 @@ depends_on = None
 
 def upgrade() -> None:
     op.create_table('queries',
-                    sa.Column('id', sa.Integer(), nullable=False),
+                    sa.Column('id', sa.String(), nullable=False),
                     sa.Column('text', sa.String(500), unique=True, nullable=False),
                     sa.Column('created_at', sa.TIMESTAMP(timezone=True),
                               server_default=sa.text('now()'), nullable=False),

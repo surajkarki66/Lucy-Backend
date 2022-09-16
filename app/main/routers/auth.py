@@ -71,7 +71,7 @@ def get_users(db: Session = Depends(get_db), limit: int = 10,
 
 @router.get('/{id}', response_model=UserSchema,
             dependencies=[Depends(allow_view_resource)])
-def get_one_user(id: int, db: Session = Depends(get_db)) -> dict:
+def get_one_user(id: str, db: Session = Depends(get_db)) -> dict:
     user = db.query(User).filter(User.id == id).first()
     if not user:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,
@@ -81,7 +81,7 @@ def get_one_user(id: int, db: Session = Depends(get_db)) -> dict:
 
 
 @router.delete("/{id}", status_code=status.HTTP_204_NO_CONTENT)
-def delete_user(id: int, db: Session = Depends(get_db),
+def delete_user(id: str, db: Session = Depends(get_db),
                 current_user: UserSchema = Depends(allow_update_resource)) -> dict:
 
     user_query = db.query(User).filter(User.id == id)
@@ -103,7 +103,7 @@ def delete_user(id: int, db: Session = Depends(get_db),
 
 
 @router.patch("/{id}", response_model=UserSchema)
-def update_user(id: int, updated_post: UserUpdateSchema,
+def update_user(id: str, updated_post: UserUpdateSchema,
                 db: Session = Depends(get_db),
                 current_user: UserSchema = Depends(allow_update_resource)):
 
@@ -128,7 +128,7 @@ def update_user(id: int, updated_post: UserUpdateSchema,
 
 
 @router.patch("/change_password/{id}", response_model=UserSchema)
-def change_password(id: int, updated_user: PasswordUpdateSchema,
+def change_password(id: str, updated_user: PasswordUpdateSchema,
                     db: Session = Depends(get_db),
                     current_user: UserSchema = Depends(allow_update_resource)):
 
