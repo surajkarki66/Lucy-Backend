@@ -92,3 +92,23 @@ class IntentUpdateSchema(IntentBase):
     updated_at: datetime = Field(default_factory=datetime.now)
     pass
 
+# Queries
+class QueryBase(BaseModel):
+    text: str = Field(..., min_length=5, max_length=500)
+    intent: str = Field(..., min_length=1, max_length=255)
+
+    class Config:
+        orm_mode = True
+
+class QueryCreateSchema(QueryBase):
+    pass
+
+class QuerySchema(QueryBase):
+    id: int = Field(...)
+    created_at: datetime = Field(...)
+    updated_at: datetime = Field(...)
+
+
+class QueryUpdateSchema(QueryBase):
+    updated_at: datetime = Field(default_factory=datetime.now)
+    pass
