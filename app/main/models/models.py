@@ -54,5 +54,22 @@ class Query(Base):
 
     intent_details = relationship("Intent")
 
+
+class Response(Base):
+    __tablename__ = 'responses'
+    id = Column(Integer, primary_key=True, nullable=False)
+    text = Column(String(1000), unique=True, nullable=False)
+    link = Column(String(255), nullable=True)
+    created_at = Column(TIMESTAMP(timezone=True),
+                        nullable=False, server_default=expression.text('now()'))
+
+    updated_at = Column(TIMESTAMP(timezone=True),
+                        nullable=False, server_default=expression.text('now()'))
+
+    tag = Column(String(255), ForeignKey(
+        "intents.title", ondelete="CASCADE"), nullable=False)
+
+    tag_details = relationship("Intent")
+
     
 
