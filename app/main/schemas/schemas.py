@@ -72,7 +72,7 @@ class FeedbackSchema(FeedbackBase):
 # Bot
 class GetBotResponseSchema(BaseModel):
     message: str = Field(...)
-    links: list = Field(...)
+    link: str = Field(...)
 
 # Intent
 class IntentBase(BaseModel):

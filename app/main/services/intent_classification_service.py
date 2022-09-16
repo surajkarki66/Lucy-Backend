@@ -33,16 +33,8 @@ class IntentClassificationService(object):
             PRETRAINED_MODEL = DistilBertModel.from_pretrained("distilbert-base-uncased")
             self.TOKENIZER = DistilBertTokenizer.from_pretrained("distilbert-base-uncased")
 
-        # TODO: Fetching below from database
-        LABELS_DIR = BASE_DIR.joinpath('datasets')
-        INTENTS_TO_RESPONSE = LABELS_DIR.joinpath('intents.json')
-
         self.model = Lucy(PRETRAINED_MODEL)
         self.model.load_state_dict(torch.load(LUCY_MODEL))
-
-        with open(INTENTS_TO_RESPONSE, "r") as f:
-            self.intents_to_response = json.load(f)
-
 
     def predict(self, query):
         query = re.sub(r'[^a-zA-Z ]+', '', query)
@@ -68,17 +60,6 @@ class IntentClassificationService(object):
         pred = np.argmax(pred)
 
         return pred
-
-    def get_response(self, intent): 
-        result = None
-        links = []
-      
-        for i in self.intents_to_response['intents']: 
-            if i["tag"] == intent:
-                result = random.choice(i["responses"])
-                break
-        return result, i["links"]
-
 
         
 
