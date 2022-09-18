@@ -54,7 +54,7 @@ def user_login(response: Response, user: UserLoginSchema, db: Session = Depends(
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN, detail="Incorrect password")
 
-    access_token = signJWT(check_user.id, settings.JWT_EXPIRE_SECONDS)
+    access_token = signJWT(check_user.id, check_user.role, settings.JWT_EXPIRE_SECONDS)
     response.set_cookie(key="access_token",
                         value=f"{access_token}", expires=settings.JWT_EXPIRE_SECONDS, httponly=True, secure=True)
 

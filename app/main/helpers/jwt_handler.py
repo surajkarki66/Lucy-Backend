@@ -5,9 +5,10 @@ from typing import Dict
 from app.main.config import settings
 
 
-def signJWT(user_id: int, expires_in_seconds: int) -> Dict[str, str]:
+def signJWT(user_id: int, role: str, expires_in_seconds: int) -> Dict[str, str]:
     payload = {
         "user_id": user_id,
+        "role": role,
         "iat": time.time(),
         "exp": time.time() + expires_in_seconds
     }
