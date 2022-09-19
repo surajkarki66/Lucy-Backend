@@ -73,6 +73,7 @@ class FeedbackSchema(FeedbackBase):
 class GetBotResponseSchema(BaseModel):
     message: str = Field(...)
     link: str = Field(...)
+    probability:int = Field(...)
 
 # Intent
 class IntentBase(BaseModel):

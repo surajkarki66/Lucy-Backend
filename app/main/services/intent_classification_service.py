@@ -56,10 +56,12 @@ class IntentClassificationService(object):
         with torch.no_grad():
             pred = self.model(test_seq.to(settings.DEVICE), test_mask.to(settings.DEVICE))
         
+      
         pred = pred.detach().cpu().numpy()
+        prob = np.exp(np.amax(pred))
         pred = np.argmax(pred)
 
-        return pred
+        return pred, prob
 
         
 
