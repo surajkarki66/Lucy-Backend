@@ -117,7 +117,7 @@ class QueryUpdateSchema(QueryBase):
 # Response
 class ResponseBase(BaseModel):
     text: str = Field(..., min_length=5, max_length=1000)
-    link: Optional[str] = Field(None, min_length=1, max_length=255)
+    link: Optional[str] = Field(None, max_length=255)
     tag: str = Field(..., min_length=2, max_length=255)
 
     class Config:

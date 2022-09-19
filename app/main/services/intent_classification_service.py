@@ -34,7 +34,7 @@ class IntentClassificationService(object):
             self.TOKENIZER = DistilBertTokenizer.from_pretrained("distilbert-base-uncased")
 
         self.model = Lucy(PRETRAINED_MODEL)
-        self.model.load_state_dict(torch.load(LUCY_MODEL))
+        self.model.load_state_dict(torch.load(LUCY_MODEL, map_location=torch.device(settings.DEVICE)))
 
     def predict(self, query):
         query = re.sub(r'[^a-zA-Z ]+', '', query)

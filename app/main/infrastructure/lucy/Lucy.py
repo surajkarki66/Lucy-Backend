@@ -4,7 +4,7 @@ import torch.nn as nn
 class Lucy(nn.Module):
   def __init__(self, pretrained_model):      
        super(Lucy, self).__init__()    
-       self.len_labels = 38   
+       self.len_labels = 42
        self.pretrained_model = pretrained_model 
       
        # dropout layer
