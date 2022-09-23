@@ -1,4 +1,5 @@
 import random
+import torch.onnx
 
 from fastapi import status, Depends
 from sqlalchemy.orm import Session
@@ -17,11 +18,9 @@ router = APIRouter(prefix='/bot')
 def get_bot_response(message: str, db: Session = Depends(get_db)) -> dict : 
     inp_x=message.lower()
     pred, prob = classification_service.predict(inp_x)
-    print(prob)
     if prob > 0.7:
         link = None
         intent = db.query(Intent).filter(Intent.intent_no == int(pred)).first()
-        print(intent.title)
         responses = db.query(Response).filter(Response.tag == str(intent.title)).all()
         response = random.choice(responses)
 
