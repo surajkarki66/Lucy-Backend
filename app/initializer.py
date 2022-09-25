@@ -1,16 +1,14 @@
 class IncludeAPIRouter(object):
     def __new__(cls):
         from fastapi.routing import APIRouter
-        from app.main.routers.hello_world import router as router_hello_world
-        from app.main.routers.chat_bot import router as router_chat_bot
-        from app.main.routers.feedback import router as router_feedback
-        from app.main.routers.intent import router as router_intent
-        from app.main.routers.query import router as router_query
-        from app.main.routers.response import router as router_response
-        from app.main.routers.auth import router as router_auth
+        from app.routers.chat_bot import router as router_chat_bot
+        from app.routers.feedback import router as router_feedback
+        from app.routers.intent import router as router_intent
+        from app.routers.query import router as router_query
+        from app.routers.response import router as router_response
+        from app.routers.auth import router as router_auth
         
         router = APIRouter()
-        router.include_router(router_hello_world, prefix='/api/v2', tags=['hello_world'])
         router.include_router(router_chat_bot, prefix='/api/v2', tags=['chat_bot'])
         router.include_router(router_feedback, prefix='/api/v2', tags=['feedback'])
         router.include_router(router_auth, prefix="/api/v2", tags=["auth"])
@@ -23,7 +21,7 @@ class IncludeAPIRouter(object):
 
 class DataBaseInstance(object):
     def __new__(cls):
-        from app.main.infrastructure.database.db import get_db
+        from app.infrastructure.database.db import get_db
         return get_db
 
 
