@@ -1,7 +1,7 @@
 import random
 import torch.onnx
 
-from fastapi import status, Depends
+from fastapi import status, Depends, HTTPException
 from sqlalchemy.orm import Session
 from fastapi.routing import APIRouter
 
@@ -21,6 +21,9 @@ def get_bot_response(message: str, db: Session = Depends(get_db)) -> dict :
     if prob > 0.7:
         link = None
         intent = db.query(Intent).filter(Intent.intent_no == int(pred)).first()
+        if intent is None:
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,
+                            detail=f"Oops! there are no intents, first create intents")
         responses = db.query(Response).filter(Response.tag == str(intent.title)).all()
         response = random.choice(responses)
 
