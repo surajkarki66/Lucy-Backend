@@ -11,6 +11,8 @@ class Settings(BaseSettings):
     DATABASE_PASSWORD: str
     DATABASE_NAME: str
     DATABASE_USERNAME: str
+    PGADMIN_EMAIL: str
+    PGADMIN_PASSWORD: str
     JWT_EXPIRE_SECONDS: int
     SECRET_KEY: str
     ALGORITHM: str
