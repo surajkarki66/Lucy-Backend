@@ -15,7 +15,11 @@ def get_response_query():
 
 if __name__ == "__main__":
     with engine.connect() as con:
-        intent_label_query = get_intent_label_query()
-        response_query = get_response_query()
-        con.execute(intent_label_query)
-        con.execute(response_query)
+        try:
+            intent_label_query = get_intent_label_query()
+            response_query = get_response_query()
+            con.execute(intent_label_query)
+            con.execute(response_query)
+            print("Intents and Responses is successfully loaded into the database")
+        except:
+            print("Intents and responses are already loaded.")
