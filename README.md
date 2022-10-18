@@ -46,21 +46,19 @@ Back-end code for a NLP Powered Chatbot (3rd year project) written in Python usi
    MODEL_NAME=<type of pretrained model which is either bert or distilbert>
 
    ```
-
-5. There are three models in lucy_models directory, one is a bert, another is roberta and another distil bert, you can choose any one of them. Based on the model you have to change the value MODEL_NAME environment variable to `bert` or `roberta` or `distilbert`.
-6. Install all the dependencies
+5. Install all the dependencies
    ```bash
    pip install -r "requirements.txt"
    ```
-7. Migrate the database
+6. Migrate the database
    ```bash
    alembic upgrade head
    ```
-8. Migrate the data
+7. Migrate the data
    ```bash
    python seeder.py
    ```
-9. Run
+8. Run
    ```bash
    python manage.py
    ```
@@ -92,10 +90,8 @@ Back-end code for a NLP Powered Chatbot (3rd year project) written in Python usi
    MODEL_NAME=<type of pretrained model which is either bert or distilbert>
 
    ```
-
-4. Create a directory with name `lucy_models` in a root directory
-5. Download the [pretrained_model](https://github.com/surajkarki66/Lucy-APIs/releases/tag/Lucy0.0.1) which is a file with `.pth` extension. There are two models one is a bert and another distil bert, you can choose any one of them. Based on the model you have to change the value MODEL_NAME environment variable to `bert` or `distilbert`.
-6. Run
+   
+4. Run
    ```bash
    docker compose up
    ```
