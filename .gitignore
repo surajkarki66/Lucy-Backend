@@ -24,5 +24,3 @@ archive.zip
 *~
 .*.sw?
 
-#lucy_models/
-lucy_models/lucy_bert.pth
