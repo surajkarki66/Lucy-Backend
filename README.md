@@ -9,6 +9,7 @@ Back-end code for a NLP Powered Chatbot (3rd year project) written in Python usi
 
 1. [Installation](#1-installation)
 2. [API endpoints](#2-api-endpoints)
+3. [Running Frontend](#3-running-frontend)
 
 ---
 
@@ -100,3 +101,6 @@ Back-end code for a NLP Powered Chatbot (3rd year project) written in Python usi
     ```
 ### 2. API Endpoints
 You can access the documentation of the API by going to this link [http://0.0.0.0:8080/docs](http://0.0.0.0:8080/docs) after running the backend server.
+
+### 3. Running Frontend
+To run the frontend of the Lucy first go to this [link](https://github.com/surajkarki66/Lucy-Frontend) and follow the instructions.
