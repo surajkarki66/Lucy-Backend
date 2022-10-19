@@ -32,20 +32,21 @@ Back-end code for a NLP Powered Chatbot (3rd year project) written in Python usi
    API_VERSION="0.0.2"
    DATABASE_HOSTNAME="localhost"
    DATABASE_PORT=5432
-   DATABASE_USERNAME=<write username>
-   DATABASE_PASSWORD=<write password>
-   DATABASE_NAME=<write DB-name>
+   DATABASE_USERNAME=postgres
+   DATABASE_PASSWORD=postgres
+   DATABASE_NAME="lucy"
    PGADMIN_EMAIL="admin@admin.com"
    PGADMIN_PASSWORD="admin"
    JWT_EXPIRE_SECONDS=604800
-   SECRET_KEY=<write security-key>
+   SECRET_KEY=<write strong security-key>
    ALGORITHM="HS256"
    HOST="0.0.0.0"
    PORT=8080
    DEVICE="cpu"
-   MODEL_NAME=<type of pretrained model which is either bert or distilbert>
+   MODEL_NAME="distilbert"
 
    ```
+
 5. Install all the dependencies
    ```bash
    pip install -r "requirements.txt"
@@ -78,7 +79,7 @@ Back-end code for a NLP Powered Chatbot (3rd year project) written in Python usi
    DATABASE_PORT=5432
    DATABASE_USERNAME=<write a db username>
    DATABASE_PASSWORD=<write a db password>
-   DATABASE_NAME=<write DB-name>
+   DATABASE_NAME="lucy"
    PGADMIN_EMAIL="admin@admin.com"
    PGADMIN_PASSWORD="admin"
    JWT_EXPIRE_SECONDS=604800
@@ -87,10 +88,10 @@ Back-end code for a NLP Powered Chatbot (3rd year project) written in Python usi
    HOST="0.0.0.0"
    PORT=8080
    DEVICE="cpu"
-   MODEL_NAME=<type of pretrained model which is either bert or distilbert>
+   MODEL_NAME="distilbert"
 
    ```
-   
+
 4. Run
    ```bash
    docker compose up
