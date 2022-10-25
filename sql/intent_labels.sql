@@ -39,5 +39,4 @@ insert into "intents" ("created_at", "intent_no", "title", "updated_at") values 
 insert into "intents" ("created_at", "intent_no", "title", "updated_at") values ('2022-09-16 17:42:56.413802+05:45', 38, 'task', '2022-09-16 17:42:56.413802+05:45');
 insert into "intents" ("created_at", "intent_no", "title", "updated_at") values ('2022-09-16 17:43:10.827078+05:45', 39, 'transport', '2022-09-16 17:43:10.827078+05:45');
 insert into "intents" ("created_at", "intent_no", "title", "updated_at") values ('2022-09-16 17:43:25.039572+05:45', 40, 'uniform', '2022-09-16 17:43:25.039572+05:45');
-insert into "intents" ("created_at", "intent_no", "title", "updated_at") values ('2022-09-16 17:43:25.039572+05:45', 41, 'university affiliation', '2022-09-16 17:43:25.039572+05:45');
-
+insert into "intents" ("created_at", "intent_no", "title", "updated_at") values ('2022-09-16 17:43:25.039572+05:45', 41, 'university affiliation', '2022-10-25 14:49:32.173549+05:45');
