@@ -1,6 +1,6 @@
 # Lucy: A NLP Powered Chatbot
 
-Back-end code for a NLP Powered Chatbot (3rd year project) written in Python using FastAPI framework. It provides an handful of API endpoints to perform all the tasks related to chatbot.
+This is an end-to-end implementation of deep learning. The Lucy is a web-based chatbot, which gives you information about Nepal Engineering College from where I graduated and this was my second minor college project. This repository contains back-end code for a NLP Powered Chatbot (3rd year project) written in Python using FastAPI framework. It provides a handful of API endpoints to perform all the tasks related to the chatbot.
 
 ---
 
