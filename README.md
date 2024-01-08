@@ -6,9 +6,13 @@ This is an end-to-end implementation of deep learning. The Lucy is a web-based c
 
 ## Table of Contents
 
-1. [Installation](#1-installation)
-2. [API endpoints](#2-api-endpoints)
-3. [Running Frontend](#3-running-frontend)
+- [Lucy: A NLP Powered Chatbot](#lucy-a-nlp-powered-chatbot)
+  - [Table of Contents](#table-of-contents)
+    - [1. Installation](#1-installation)
+      - [i. Locally](#i-locally)
+      - [ii. Using Docker](#ii-using-docker)
+    - [2. API Endpoints](#2-api-endpoints)
+    - [3. Running Frontend](#3-running-frontend)
 
 ---
 
@@ -43,23 +47,23 @@ This is an end-to-end implementation of deep learning. The Lucy is a web-based c
    HOST="0.0.0.0"
    PORT=8080
    DEVICE="cpu"
-   MODEL_NAME="distilbert"
+   MODEL_NAME="bert"
 
    ```
-
-5. Install all the dependencies
+5. [Click here](https://github.com/surajkarki66/Lucy-Backend/releases/download/Lucy0.0.1/lucy_bert.pth) and download the pre-trained `lucy_bert.pth` file and paste it inside the `lucy_models` directory of project root.
+6. Install all the dependencies
    ```bash
    pip install -r "requirements.txt"
    ```
-6. Migrate the database
+7. Migrate the database
    ```bash
    alembic upgrade head
    ```
-7. Migrate the data
+8. Migrate the data
    ```bash
    python seeder.py
    ```
-8. Run
+9. Run
    ```bash
    python manage.py
    ```
@@ -88,11 +92,12 @@ This is an end-to-end implementation of deep learning. The Lucy is a web-based c
    HOST="0.0.0.0"
    PORT=8080
    DEVICE="cpu"
-   MODEL_NAME="distilbert"
+   MODEL_NAME="bert"
 
    ```
 
-4. Run
+4. [Click here](https://github.com/surajkarki66/Lucy-Backend/releases/download/Lucy0.0.1/lucy_bert.pth) and download the pre-trained `lucy_bert.pth` file and paste it inside the `lucy_models` directory of project root.
+5. Run
    ```bash
    docker compose up
    ```

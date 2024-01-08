@@ -2,15 +2,11 @@ from typing import List
 from sqlalchemy.orm import Session
 from fastapi import APIRouter, HTTPException, status, Depends, Response
 
-
 from app.models.models import User
 from app.configs.config import settings
 from app.infrastructure.database.db import get_db
 from app.utility.utils import hash, verify
 from app.helpers.jwt_handler import signJWT
-from app.helpers.jwt_bearer import JWTBearer
-
-
 
 from app.middlewares.role_checker import RoleChecker
 from app.schemas.schemas import UserLoginSchema, UserSchema, UserCreateSchema,\
