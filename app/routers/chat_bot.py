@@ -18,7 +18,7 @@ router = APIRouter(prefix='/bot')
 def get_bot_response(message: str, db: Session = Depends(get_db)) -> dict : 
     inp_x=message.lower()
     pred, prob = classification_service.predict(inp_x)
-    if prob > 0.7:
+    if prob > 0.55:
         link = None
         intent = db.query(Intent).filter(Intent.intent_no == int(pred)).first()
         if intent is None:

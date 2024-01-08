@@ -33,7 +33,7 @@ class IntentClassificationService(object):
             PRETRAINED_MODEL = DistilBertModel.from_pretrained("distilbert-base-uncased")
             self.TOKENIZER = DistilBertTokenizer.from_pretrained("distilbert-base-uncased")
 
-        self.model = Lucy(PRETRAINED_MODEL)
+        self.model = Lucy(PRETRAINED_MODEL).to(settings.DEVICE)
         self.model.load_state_dict(torch.load(LUCY_MODEL, map_location=torch.device(settings.DEVICE)))
 
     def predict(self, query):
@@ -44,7 +44,7 @@ class IntentClassificationService(object):
         
         tokens_test_data = self.TOKENIZER(
                         test_text,
-                        max_length = 9,
+                        max_length = 20,
                         padding="max_length",
                         truncation=True,
                         return_token_type_ids=False
