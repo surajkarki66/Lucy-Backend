@@ -1,0 +1,1 @@
+insert into "users" ("created_at", "email", "first_name", "id", "last_name", "password", "role", "updated_at") values ('2024-01-08 10:15:46.528713+00', 'admin@admin.com', 'admin', 'f20ac087-c2f3-46dc-bab0-186c6e4eb8cd', 'user', '$2b$12$CEUmoIOs6RikSJJEo3vnyezANK8iyivE/5l18A7fOTQIl1DR1Rswe', 'admin', '2024-01-08 10:15:46.528713+00');
