@@ -50,7 +50,7 @@ This is an end-to-end implementation of deep learning. The Lucy is a web-based c
    MODEL_NAME="bert"
 
    ```
-5. [Click here](https://github.com/surajkarki66/Lucy-Backend/releases/download/Lucy0.0.1/lucy_bert.pth) and download the pre-trained `lucy_bert.pth` file and paste it inside the `lucy_models` directory of project root.
+5. [Click here](https://github.com/surajkarki66/Lucy-Backend/releases/download/Lucy0.0.2/lucy_bert.pth) and download the pre-trained `lucy_bert.pth` file and paste it inside the `lucy_models` directory of project root.
 6. Install all the dependencies
    ```bash
    pip install -r "requirements.txt"
@@ -96,7 +96,7 @@ This is an end-to-end implementation of deep learning. The Lucy is a web-based c
 
    ```
 
-4. [Click here](https://github.com/surajkarki66/Lucy-Backend/releases/download/Lucy0.0.1/lucy_bert.pth) and download the pre-trained `lucy_bert.pth` file and paste it inside the `lucy_models` directory of project root.
+4. [Click here](https://github.com/surajkarki66/Lucy-Backend/releases/download/Lucy0.0.2/lucy_bert.pth) and download the pre-trained `lucy_bert.pth` file and paste it inside the `lucy_models` directory of project root.
 5. Run
    ```bash
    docker compose up
